@@ -84,7 +84,7 @@ def save_to_cache():
 def load_and_prepare_data():
     """
     Loads data from local CSV files, preprocesses it, and trains the BERT and NearestNeighbors models.
-    This function is called once
+    This function is called once when the Flask application starts.
     """
     global articles_df, transactions_df, articles_sample_df, transactions_sample_df
     global embeddings, nn_model, article_id_to_idx, idx_to_article_id, is_initialized
