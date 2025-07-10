@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Product Recommender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        // Tailwind Configuration
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.7s ease-out',
+                        'slide-up': 'slideUp 0.7s ease-out',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                        'rotate-sun': 'rotateSun 0.5s ease-out',
+                        'rotate-moon': 'rotateMoon 0.5s ease-out',
+                        'cursor-blink': 'cursorBlink 1s infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        rotateSun: {
+                            '0%': { transform: 'rotate(0deg) scale(0.5)' },
+                            '100%': { transform: 'rotate(360deg) scale(1)' },
+                        },
+                        rotateMoon: {
+                            '0%': { transform: 'rotate(0deg) scale(0.5)' },
+                            '100%': { transform: 'rotate(-360deg) scale(1)' },
+                        },
+                        cursorBlink: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Cursor base styles */
+        .cursor-dot,
+        .cursor-dot-outline {
+            pointer-events: none;
+            position: fixed;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .cursor-dot-outline {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Scrolling cursor styles */
+        .cursor-scrolling .cursor-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: breathe 2s infinite;
+        }
+
+        .cursor-scrolling .cursor-dot-outline {
+            width: 16px;
+            height: 35px;
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Breathing animation for the dot */
+        @keyframes breathe {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        /* Scroll direction indicators with smoother animation */
+        .cursor-scrolling.scrolling-down .cursor-dot {
+            transform: translate(-50%, calc(-50% + 12px));
+        }
+
+        .cursor-scrolling.scrolling-up .cursor-dot {
+            transform: translate(-50%, calc(-50% - 12px));
+        }
+
+        /* Dark theme adjustments for scroll cursor */
+        .dark .cursor-scrolling .cursor-dot {
+            background-color: #22d3ee;
+        }
+        
+        .dark .cursor-scrolling .cursor-dot-outline {
+            border-color: #22d3ee;
+        }
+
+        /* Add smooth transition for dot position */
+        .cursor-scrolling .cursor-dot {
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Button hover - hexagon */
+        .cursor-button .cursor-dot {
+            clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+            width: 12px;
+            height: 12px;
+            background-color: #60a5fa;
+        }
+        
+        .cursor-button .cursor-dot-outline {
+            clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: #60a5fa;
+            opacity: 0.3;
+            animation: rotate 2s linear infinite;
+        }
+
+        /* Input hover - beam */
+        .cursor-input .cursor-dot {
+            width: 3px;
+            height: 24px;
+            border-radius: 0;
+            background-color: #f0f9ff;
+            animation: blink 1s infinite;
+        }
+        
+        .cursor-input .cursor-dot-outline {
+            width: 12px;
+            height: 32px;
+            border-radius: 4px;
+            background-color: rgba(240, 249, 255, 0.2);
+            border-color: #f0f9ff;
+        }
+
+        /* Link hover - arrow */
+        .cursor-link .cursor-dot {
+            clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+            width: 24px;
+            height: 24px;
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: point 1s infinite;
+            background-color: #22d3ee;
+        }
+        
+        .cursor-link .cursor-dot-outline {
+            opacity: 0;
+        }
+
+        /* Click animation - starburst */
+        .cursor-clicking .cursor-dot {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            width: 24px;
+            height: 24px;
+            background-color: #a5b4fc;
+        }
+        
+        .cursor-clicking .cursor-dot-outline {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            width: 48px;
+            height: 48px;
+            border: none;
+            background-color: #a5b4fc;
+            opacity: 0.3;
+            animation: burst 0.5s ease-out;
+        }
+
+        /* Card hover - plus */
+        .cursor-card .cursor-dot {
+            clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+            width: 16px;
+            height: 16px;
+            background-color: #34d399;
+        }
+        
+        .cursor-card .cursor-dot-outline {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(52, 211, 153, 0.2);
+            border-color: #34d399;
+            transform: rotate(45deg);
+        }
+
+        /* Animations */
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes point {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) rotate(-35deg); }
+        }
+
+        @keyframes burst {
+            0% { transform: translate(-50%, -50%) scale(0.5) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) scale(1.2) rotate(180deg); }
+            100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+        }
+
+        /* Hide default cursor */
+        * {
+            cursor: none !important;
+        }
+
+        /* Show default cursor for touch devices */
+        @media (hover: none) {
+            .cursor-dot,
+            .cursor-dot-outline {
+                display: none;
+            }
+            * {
+                cursor: auto !important;
+            }
+        }
+
+        /* Rest of your existing styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+            min-height: 100vh;
+            background-color: transparent;
+        }
+
+        /* Background wrapper */
+        .bg-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .bg-light,
+        .bg-dark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .bg-light {
+            background-image: url('https://imgs.search.brave.com/Ya5sFnJ9ChfeFJ-V9mdedKy8tS6t5FFotyHSLQmLLdY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNDQw/NzEzMC5qcGc');
+            opacity: 1;
+        }
+
+        .bg-dark {
+            background-image: url('https://imgs.search.brave.com/mPdBkt8pmRijyOMidxzmirRxfOVse2zYs0CJqGOr-UI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS85MC82/MS9SSnVaWEkuanBn');
+            opacity: 0;
+        }
+
+        body.dark .bg-light {
+            opacity: 0;
+        }
+
+        body.dark .bg-dark {
+            opacity: 1;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .loader {
+            border: 4px solid;
+            border-top: 4px solid currentColor;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+            transition: all 0.3s ease;
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        .theme-toggle i {
+            font-size: 1.25rem;
+            transition: all 0.5s ease;
+        }
+        .theme-toggle .fa-sun {
+            animation: rotate-sun 0.5s ease-out;
+        }
+        .theme-toggle .fa-moon {
+            animation: rotate-moon 0.5s ease-out;
+        }
+        .product-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .product-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .dark .product-card {
+            background: rgba(30, 41, 59, 0.85) !important;
+        }
+        .dark .loader {
+            border-color: #4B5563;
+            border-top-color: #9CA3AF;
+        }
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            animation: fadeIn 0.7s ease-out;
+        }
+        .dark .content-wrapper {
+            background: rgba(17, 24, 39, 0.85);
+        }
+        .cursor-pointer {
+            cursor: pointer;
+        }
+        input:focus {
+            cursor: text;
+        }
+        button:not(:disabled) {
+            cursor: pointer;
+        }
+        button:disabled {
+            cursor: not-allowed;
+        }
+        .typing-cursor::after {
+            content: '|';
+            animation: cursorBlink 1s infinite;
+        }
+    </style>
+</head>
+<body class="bg-transparent text-gray-800 dark:text-gray-100">
+    <!-- Add cursor elements at the start of body -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-dot-outline"></div>
+
+    <!-- Add background wrapper -->
+    <div class="bg-wrapper">
+        <div class="bg-light"></div>
+        <div class="bg-dark"></div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl">
+        <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+        <i class="fas fa-moon text-blue-300 hidden dark:block"></i>
+    </button>
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <div class="content-wrapper p-8 mb-8">
+            <header class="text-center mb-12 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    Personalized Product Recommender
+                </h1>
+                <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
+                    Enter a customer ID to get product recommendations based on their purchase history.
+                </p>
+            </header>
+
+            <div class="bg-white/90 dark:bg-gray-800/90 p-8 rounded-2xl shadow-lg mb-12 animate-slide-up backdrop-blur-md">
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <div class="relative w-full">
+                        <input type="text" 
+                               id="customerIdInput" 
+                               class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg 
+                                      bg-white/90 dark:bg-gray-700/90 text-gray-900 dark:text-white
+                                      focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
+                                      transition-all duration-300" 
+                               placeholder="Enter or paste a customer ID...">
+                    </div>
+                    <button id="getRecsButton" 
+                            class="w-full sm:w-auto bg-primary-600 text-white font-semibold px-8 py-3 
+                                   rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 
+                                   focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 
+                                   transform hover:scale-105 active:scale-95">
+                        Get Recommendations
+                    </button>
+                </div>
+                <div id="sampleCustomers" class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                    <p class="mb-2">Don't have an ID? Try one of these samples:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="sample-id-btn bg-gray-100/90 dark:bg-gray-700/90 hover:bg-gray-200/90 
+                                     dark:hover:bg-gray-600/90 px-3 py-1.5 rounded-md transition-colors 
+                                     duration-200" 
+                                data-full-id="5aafadc16529cc7d272b35571af76f184188d3e12fb9f4433f94315ebb4dc095">
+                                5aafadc16529...
+                        </button>
+                        <button class="sample-id-btn bg-gray-100/90 dark:bg-gray-700/90 hover:bg-gray-200/90 
+                                     dark:hover:bg-gray-600/90 px-3 py-1.5 rounded-md transition-colors 
+                                     duration-200" 
+                                data-full-id="00006413d8573cd20ed7128e53b7b13819fe5cfc2d801f3fc43a6932f4e5559d">
+                            00006413d8...
+                        </button>
+                        <button class="sample-id-btn bg-gray-100/90 dark:bg-gray-700/90 hover:bg-gray-200/90 
+                                     dark:hover:bg-gray-600/90 px-3 py-1.5 rounded-md transition-colors 
+                                     duration-200" 
+                                data-full-id="0001d44dbe7f6c4b35d93641d805be95dfd0c941373e3562b6f3a09a52980682">
+                            0001d44dbe...
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultsSection" class="hidden animate-fade-in content-wrapper p-8">
+            <div id="loader" class="flex justify-center items-center py-12 hidden">
+                <div class="loader"></div>
+            </div>
+
+            <div id="errorMessage" class="hidden bg-red-100/90 dark:bg-red-900/50 border border-red-400 
+                                        dark:border-red-700 text-red-700 dark:text-red-300 px-6 py-4 
+                                        rounded-lg relative mb-6" role="alert">
+                <strong class="font-bold">Error: </strong>
+                <span class="block sm:inline" id="errorText"></span>
+            </div>
+            
+            <div id="lastPurchaseInfo" class="hidden mb-12">
+                <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
+                    Based on your last purchase:
+                </h2>
+                <div class="bg-white/90 dark:bg-gray-800/90 p-6 rounded-xl shadow-md flex items-center gap-6 
+                            transform transition-all duration-300 hover:shadow-lg backdrop-blur-md">
+                    <img id="lastPurchaseImg" src="" alt="Last Purchased Product" 
+                         class="w-24 h-32 object-cover rounded-lg shadow-sm">
+                    <div>
+                        <p id="lastPurchaseName" class="font-bold text-xl mb-2 text-gray-900 dark:text-white"></p>
+                        <p id="lastPurchaseType" class="text-gray-600 dark:text-gray-300"></p>
+                        <p id="lastPurchaseId" class="text-sm text-gray-400 dark:text-gray-500 mt-2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="recommendationsContainer" class="hidden">
+                <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
+                    We think you'll like these:
+                </h2>
+                <div id="recommendationsGrid" class="card-container">
+                    <!-- Cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Updated cursor animation script
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorOutline = document.querySelector(".cursor-dot-outline");
+
+        // Variables for scroll handling
+        let lastScrollY = window.scrollY;
+        let scrollTimeout;
+        let isScrolling = false;
+
+        // Precise cursor positioning
+        document.addEventListener("mousemove", (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Request animation frame for smooth movement
+            requestAnimationFrame(() => {
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                cursorOutline.style.left = `${posX}px`;
+                cursorOutline.style.top = `${posY}px`;
+            });
+        });
+
+        // Scroll handling
+        window.addEventListener("scroll", () => {
+            if (!isScrolling) {
+                document.body.classList.add('cursor-scrolling');
+                isScrolling = true;
+            }
+
+            const currentScroll = window.scrollY;
+            const scrollDelta = currentScroll - lastScrollY;
+            
+            // Only update classes if there's actual scroll movement
+            if (Math.abs(scrollDelta) > 1) {  // Small threshold to prevent tiny movements
+                if (scrollDelta > 0) {
+                    // Scrolling down
+                    document.body.classList.remove('scrolling-up');
+                    document.body.classList.add('scrolling-down');
+                } else {
+                    // Scrolling up
+                    document.body.classList.remove('scrolling-down');
+                    document.body.classList.add('scrolling-up');
+                }
+            }
+            
+            lastScrollY = currentScroll;
+
+            // Clear any existing timeout
+            clearTimeout(scrollTimeout);
+            
+            // Set new timeout
+            scrollTimeout = setTimeout(() => {
+                document.body.classList.remove('cursor-scrolling', 'scrolling-down', 'scrolling-up');
+                isScrolling = false;
+            }, 200);  // Increased timeout for smoother transition
+        });
+
+        // Element-specific cursor styles
+        const buttons = document.querySelectorAll('button');
+        const inputs = document.querySelectorAll('input');
+        const links = document.querySelectorAll('a');
+        const cards = document.querySelectorAll('.product-card');
+
+        // Add hover listeners for different elements
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                if (!isScrolling) {
+                document.body.classList.add('cursor-button');
+                }
+            });
+            button.addEventListener('mouseleave', () => {
+                document.body.classList.remove('cursor-button');
+            });
+        });
+
+        // Update other element listeners similarly
+        inputs.forEach(input => {
+            input.addEventListener('mouseenter', () => {
+                if (!isScrolling) {
+                document.body.classList.add('cursor-input');
+                }
+            });
+            input.addEventListener('mouseleave', () => {
+                document.body.classList.remove('cursor-input');
+            });
+        });
+
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                if (!isScrolling) {
+                document.body.classList.add('cursor-link');
+                }
+            });
+            link.addEventListener('mouseleave', () => {
+                document.body.classList.remove('cursor-link');
+            });
+        });
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if (!isScrolling) {
+                document.body.classList.add('cursor-card');
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                document.body.classList.remove('cursor-card');
+            });
+        });
+
+        // Click animation
+        document.addEventListener("mousedown", () => {
+            if (!isScrolling) {
+            document.body.classList.add('cursor-clicking');
+            }
+        });
+
+        document.addEventListener("mouseup", () => {
+            document.body.classList.remove('cursor-clicking');
+        });
+
+        // Hide/show cursor
+        document.addEventListener("mouseleave", () => {
+            cursorDot.style.opacity = 0;
+            cursorOutline.style.opacity = 0;
+        });
+
+        document.addEventListener("mouseenter", () => {
+            cursorDot.style.opacity = 1;
+            cursorOutline.style.opacity = 1;
+        });
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        
+        // Check for saved theme preference or default to light
+        if (localStorage.theme === 'dark' || 
+            (!('theme' in localStorage) && 
+             window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.body.classList.remove('dark');
+        }
+
+        // --- DOM Elements ---
+        const customerIdInput = document.getElementById('customerIdInput');
+        const getRecsButton = document.getElementById('getRecsButton');
+        const resultsSection = document.getElementById('resultsSection');
+        const loader = document.getElementById('loader');
+        const errorMessage = document.getElementById('errorMessage');
+        const errorText = document.getElementById('errorText');
+        const lastPurchaseInfo = document.getElementById('lastPurchaseInfo');
+        const recommendationsContainer = document.getElementById('recommendationsContainer');
+        const recommendationsGrid = document.getElementById('recommendationsGrid');
+        
+        const API_URL = 'http://127.0.0.1:5000/recommend';
+
+        // --- Event Listeners ---
+        getRecsButton.addEventListener('click', handleRecommendationRequest);
+        customerIdInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleRecommendationRequest();
+            }
+        });
+
+        document.querySelectorAll('.sample-id-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const fullId = e.target.dataset.fullId;
+                if (fullId) {
+                    customerIdInput.value = fullId;
+                    handleRecommendationRequest();
+                }
+            });
+        });
+
+        // --- Functions ---
+        async function handleRecommendationRequest() {
+            const customerId = customerIdInput.value.trim();
+            if (!customerId) {
+                showError("Please enter a customer ID.");
+                return;
+            }
+
+            resultsSection.classList.remove('hidden');
+            loader.classList.remove('hidden');
+            errorMessage.classList.add('hidden');
+            lastPurchaseInfo.classList.add('hidden');
+            recommendationsContainer.classList.add('hidden');
+            
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ customer_id: customerId })
+                });
+
+                loader.classList.add('hidden');
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    showError(errorData.error || `Error: ${response.status} ${response.statusText}`);
+                    return;
+                }
+
+                const data = await response.json();
+                displayResults(data.last_purchase, data.recommendations);
+
+            } catch (error) {
+                loader.classList.add('hidden');
+                console.error('Error fetching recommendations:', error);
+                showError("Failed to connect to the recommendation service. Please try again later.");
+            }
+        }
+
+        function showError(message) {
+            errorText.textContent = message;
+            errorMessage.classList.remove('hidden');
+            lastPurchaseInfo.classList.add('hidden');
+            recommendationsContainer.classList.add('hidden');
+        }
+
+        // Enhanced displayResults function with staggered animations
+        function displayResults(lastPurchase, recommendations) {
+            // Display last purchase with fade-in
+            if (lastPurchase) {
+                document.getElementById('lastPurchaseImg').src = 
+                    `https://placehold.co/200x240/e2e8f0/4a5568?text=${encodeURIComponent(lastPurchase.prod_name || 'Product')}`;
+                document.getElementById('lastPurchaseName').textContent = lastPurchase.prod_name;
+                document.getElementById('lastPurchaseType').textContent = lastPurchase.product_type_name;
+                document.getElementById('lastPurchaseId').textContent = `ID: ${lastPurchase.article_id}`;
+                lastPurchaseInfo.classList.remove('hidden');
+                lastPurchaseInfo.classList.add('animate-fade-in');
+            } else {
+                lastPurchaseInfo.classList.add('hidden');
+            }
+
+            // Display recommendations with staggered animations
+            recommendationsGrid.innerHTML = '';
+            if (recommendations && recommendations.length > 0) {
+                recommendations.forEach((article, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden';
+                    card.style.transitionDelay = `${index * 100}ms`;
+                    
+                    // Create search-friendly product name
+                    const searchProductName = encodeURIComponent(article.prod_name.replace(/[^\w\s]/gi, ''));
+                    
+                    card.innerHTML = `
+                        <img src="https://placehold.co/400x480/e2e8f0/4a5568?text=${encodeURIComponent(article.prod_name || 'Product')}" 
+                             alt="${article.prod_name}" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-md text-gray-900 dark:text-white truncate">
+                                ${article.prod_name}
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                                ${article.product_type_name}
+                            </p>
+                            <p class="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                                ID: ${article.article_id}
+                            </p>
+                            <div class="mt-4 space-y-2">
+                                <a href="https://www.amazon.com/s?k=${searchProductName}" 
+                                   target="_blank" 
+                                   class="flex items-center justify-center px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg transition-colors duration-200">
+                                   <i class="fab fa-amazon mr-2"></i> View on Amazon
+                                </a>
+                                <a href="https://www.flipkart.com/search?q=${searchProductName}" 
+                                   target="_blank" 
+                                   class="flex items-center justify-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors duration-200">
+                                   <i class="fas fa-shopping-cart mr-2"></i> Check on Flipkart
+                                </a>
+                                <a href="https://www.nordstrom.com/search?query=${searchProductName}" 
+                                   target="_blank" 
+                                   class="flex items-center justify-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-lg transition-colors duration-200">
+                                   <i class="fas fa-store mr-2"></i> Shop at Nordstrom
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    recommendationsGrid.appendChild(card);
+                    // Trigger animation after a brief delay
+                    setTimeout(() => {
+                        card.classList.add('show');
+                    }, 50);
+                });
+                recommendationsContainer.classList.remove('hidden');
+                recommendationsContainer.classList.add('animate-fade-in');
+            } else {
+                recommendationsContainer.classList.add('hidden');
+            }
+        }
+
+        // Add typing cursor effect to input
+        customerIdInput.addEventListener('focus', () => {
+            customerIdInput.classList.add('typing-cursor');
+        });
+        customerIdInput.addEventListener('blur', () => {
+            customerIdInput.classList.remove('typing-cursor');
+        });
+
+        // Enhanced theme toggle animation
+        themeToggle.addEventListener('click', () => {
+            const sunIcon = themeToggle.querySelector('.fa-sun');
+            const moonIcon = themeToggle.querySelector('.fa-moon');
+            
+            document.documentElement.classList.toggle('dark');
+            document.body.classList.toggle('dark'); // Add this line to toggle dark class on body
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            
+            // Reset and trigger animations
+            if (localStorage.theme === 'dark') {
+                moonIcon.style.animation = 'none';
+                setTimeout(() => {
+                    moonIcon.style.animation = 'rotateMoon 0.5s ease-out';
+                }, 10);
+            } else {
+                sunIcon.style.animation = 'none';
+                setTimeout(() => {
+                    sunIcon.style.animation = 'rotateSun 0.5s ease-out';
+                }, 10);
+            }
+        });
+    </script>
+</body>
+</html>
