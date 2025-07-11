@@ -194,3 +194,90 @@
 2025-07-11 14:51:05,108 - INFO - Successfully loaded from cache! Articles shape: (400, 26), Transactions shape: (500, 5)
 2025-07-11 14:51:05,112 - WARNING -  * Debugger is active!
 2025-07-11 14:51:05,117 - INFO -  * Debugger PIN: 101-216-444
+2025-07-11 14:51:43,055 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:51:43,055 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:51:43,055 - INFO - Attempting to load data from cache...
+2025-07-11 14:51:43,057 - INFO - Successfully loaded from cache! Articles shape: (400, 26), Transactions shape: (500, 5)
+2025-07-11 14:51:43,076 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.183.51:5000
+2025-07-11 14:51:43,076 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 14:51:43,077 - INFO -  * Restarting with stat
+2025-07-11 14:51:47,762 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:51:47,763 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:51:47,763 - INFO - Attempting to load data from cache...
+2025-07-11 14:51:47,765 - INFO - Successfully loaded from cache! Articles shape: (400, 26), Transactions shape: (500, 5)
+2025-07-11 14:51:47,769 - WARNING -  * Debugger is active!
+2025-07-11 14:51:47,773 - INFO -  * Debugger PIN: 101-216-444
+2025-07-11 14:51:52,990 - INFO - 192.168.183.51 - - [11/Jul/2025 14:51:52] "[36mGET / HTTP/1.1[0m" 304 -
+2025-07-11 14:52:01,912 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:01] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:52:01,928 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:01] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:52:13,122 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:13] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:52:13,131 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:13] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:52:22,605 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:22] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:52:22,614 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:22] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:52:29,267 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:29] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:52:29,280 - INFO - 127.0.0.1 - - [11/Jul/2025 14:52:29] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:54:23,371 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:54:23,372 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:54:23,372 - INFO - Attempting to load data from cache...
+2025-07-11 14:54:23,372 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-07-11 14:54:23,372 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-07-11 14:54:23,372 - INFO - Step 1: Loading and preprocessing data...
+2025-07-11 14:54:23,644 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-07-11 14:54:23,646 - INFO - Successfully loaded transactions_train.csv with shape: (501, 5)
+2025-07-11 14:54:23,647 - INFO - Sampled 132 customers from 132 total customers
+2025-07-11 14:54:23,647 - INFO - Got 501 transactions for sampled customers
+2025-07-11 14:54:23,647 - INFO - Found 401 unique articles in sampled transactions
+2025-07-11 14:54:23,649 - INFO - Got details for 401 articles
+2025-07-11 14:54:23,652 - INFO - Step 2: Generating text embeddings with BERT...
+2025-07-11 14:54:23,653 - INFO - Use pytorch device_name: cpu
+2025-07-11 14:54:23,653 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-11 14:54:29,447 - INFO - Generated embeddings with shape: (401, 384)
+2025-07-11 14:54:29,448 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-07-11 14:54:29,448 - INFO - Nearest Neighbors model trained successfully
+2025-07-11 14:54:29,449 - INFO - Created cache directory
+2025-07-11 14:54:29,449 - INFO - Saving data to cache...
+2025-07-11 14:54:29,454 - INFO - Successfully saved data to cache!
+2025-07-11 14:54:29,454 - INFO - Recommendation system initialized and ready.
+2025-07-11 14:54:29,466 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.183.51:5000
+2025-07-11 14:54:29,467 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 14:54:29,468 - INFO -  * Restarting with stat
+2025-07-11 14:54:32,512 - INFO - 192.168.183.51 - - [11/Jul/2025 14:54:32] "[36mGET / HTTP/1.1[0m" 304 -
+2025-07-11 14:54:34,515 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:54:34,515 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:54:34,516 - INFO - Attempting to load data from cache...
+2025-07-11 14:54:34,604 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-11 14:54:34,612 - WARNING -  * Debugger is active!
+2025-07-11 14:54:34,617 - INFO -  * Debugger PIN: 101-216-444
+2025-07-11 14:54:41,457 - INFO - 127.0.0.1 - - [11/Jul/2025 14:54:41] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:54:41,461 - INFO - 127.0.0.1 - - [11/Jul/2025 14:54:41] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:54:43,582 - INFO - 127.0.0.1 - - [11/Jul/2025 14:54:43] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:54:49,892 - INFO - 127.0.0.1 - - [11/Jul/2025 14:54:49] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:54:49,896 - INFO - 127.0.0.1 - - [11/Jul/2025 14:54:49] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:54:50,373 - INFO - 127.0.0.1 - - [11/Jul/2025 14:54:50] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:54:50,557 - INFO - 127.0.0.1 - - [11/Jul/2025 14:54:50] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:55:01,360 - INFO -  * Detected change in 'C:\\Sem V\\Machine Learning\\CAPSTONE\\codes\\app.py', reloading
+2025-07-11 14:55:01,756 - INFO -  * Detected change in 'C:\\Sem V\\Machine Learning\\CAPSTONE\\codes\\app.py', reloading
+2025-07-11 14:55:01,981 - INFO -  * Restarting with stat
+2025-07-11 14:55:02,411 - INFO -  * Restarting with stat
+2025-07-11 14:55:07,225 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:55:07,226 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:55:07,226 - INFO - Attempting to load data from cache...
+2025-07-11 14:55:07,228 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-11 14:55:07,232 - WARNING -  * Debugger is active!
+2025-07-11 14:55:07,239 - INFO -  * Debugger PIN: 101-216-444
+2025-07-11 14:55:07,246 - INFO - 127.0.0.1 - - [11/Jul/2025 14:55:07] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:55:07,258 - INFO - 127.0.0.1 - - [11/Jul/2025 14:55:07] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:55:07,653 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:55:07,654 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:55:07,654 - INFO - Attempting to load data from cache...
+2025-07-11 14:55:07,657 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-11 14:55:07,661 - WARNING -  * Debugger is active!
+2025-07-11 14:55:07,665 - INFO -  * Debugger PIN: 101-216-444
+2025-07-11 14:56:24,338 - INFO - 127.0.0.1 - - [11/Jul/2025 14:56:24] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-11 14:56:24,346 - INFO - 127.0.0.1 - - [11/Jul/2025 14:56:24] "POST /recommend HTTP/1.1" 200 -
