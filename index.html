@@ -771,8 +771,8 @@
                     card.className = 'product-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden';
                     card.style.transitionDelay = `${index * 100}ms`;
                     
-                    // Create search-friendly product name
-                    const searchProductName = encodeURIComponent(article.prod_name.replace(/[^\w\s]/gi, ''));
+                    // Create search-friendly product type name
+                    const searchProductType = encodeURIComponent(article.product_type_name.replace(/[^\w\s]/gi, ''));
                     
                     card.innerHTML = `
                         <img src="https://placehold.co/400x480/e2e8f0/4a5568?text=${encodeURIComponent(article.prod_name || 'Product')}" 
@@ -789,17 +789,17 @@
                                 ID: ${article.article_id}
                             </p>
                             <div class="mt-4 space-y-2">
-                                <a href="https://www.amazon.com/s?k=${searchProductName}" 
+                                <a href="https://www.amazon.com/s?k=${searchProductType}" 
                                    target="_blank" 
                                    class="flex items-center justify-center px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg transition-colors duration-200">
                                    <i class="fab fa-amazon mr-2"></i> View on Amazon
                                 </a>
-                                <a href="https://www.flipkart.com/search?q=${searchProductName}" 
+                                <a href="https://www.flipkart.com/search?q=${searchProductType}" 
                                    target="_blank" 
                                    class="flex items-center justify-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors duration-200">
                                    <i class="fas fa-shopping-cart mr-2"></i> Check on Flipkart
                                 </a>
-                                <a href="https://www.nordstrom.com/search?query=${searchProductName}" 
+                                <a href="https://www.nordstrom.com/search?query=${searchProductType}" 
                                    target="_blank" 
                                    class="flex items-center justify-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-lg transition-colors duration-200">
                                    <i class="fas fa-store mr-2"></i> Shop at Nordstrom
