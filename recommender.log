@@ -964,3 +964,39 @@
 2025-10-14 13:36:23,182 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
 2025-10-14 13:36:23,199 - WARNING -  * Debugger is active!
 2025-10-14 13:36:23,204 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:40:37,926 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\reshape\\concat.py', reloading
+2025-10-14 13:40:39,504 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:40:47,734 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:40:47,735 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:40:47,735 - INFO - Attempting to load data from cache...
+2025-10-14 13:40:47,738 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:40:47,754 - WARNING -  * Debugger is active!
+2025-10-14 13:40:47,756 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:51:25,183 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:51:25,183 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-14 13:51:25,184 - INFO - Attempting to load data from cache...
+2025-10-14 13:51:25,184 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-10-14 13:51:25,184 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-10-14 13:51:25,184 - INFO - Step 1: Loading and preprocessing data...
+2025-10-14 13:51:25,470 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-10-14 13:51:42,363 - INFO - Successfully loaded transactions_train.csv with shape: (31788324, 5)
+2025-10-14 13:51:47,957 - INFO - Sampled 50000 customers from 1362281 total customers
+2025-10-14 13:51:51,309 - INFO - Got 1155558 transactions for sampled customers
+2025-10-14 13:51:51,324 - INFO - Found 72363 unique articles in sampled transactions
+2025-10-14 13:51:51,337 - INFO - Got details for 72363 articles
+2025-10-14 13:51:51,405 - INFO - Step 2: Generating text embeddings with BERT...
+2025-10-14 13:51:51,407 - INFO - Use pytorch device_name: cpu
+2025-10-14 13:51:51,407 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 13:58:11,974 - INFO - Generated embeddings with shape: (72363, 384)
+2025-10-14 13:58:11,974 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-10-14 13:58:11,985 - INFO - Nearest Neighbors model trained successfully
+2025-10-14 13:58:11,998 - INFO - Created cache directory
+2025-10-14 13:58:11,999 - INFO - Saving data to cache...
+2025-10-14 13:58:12,457 - INFO - Successfully saved data to cache!
+2025-10-14 13:58:12,457 - INFO - Recommendation system initialized and ready.
+2025-10-14 13:58:12,523 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.70.233.4:5000
+2025-10-14 13:58:12,523 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 13:58:12,535 - INFO -  * Restarting with watchdog (windowsapi)
