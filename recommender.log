@@ -958,3 +958,9 @@
 2025-10-14 13:34:19,076 - INFO -  * Debugger PIN: 101-216-444
 2025-10-14 13:36:13,938 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\curses\\__init__.py', reloading
 2025-10-14 13:36:15,497 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:36:23,178 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:36:23,179 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:36:23,179 - INFO - Attempting to load data from cache...
+2025-10-14 13:36:23,182 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:36:23,199 - WARNING -  * Debugger is active!
+2025-10-14 13:36:23,204 - INFO -  * Debugger PIN: 101-216-444
