@@ -317,6 +317,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 1.5rem;
+            position: relative;
         }
         .loader {
             border: 4px solid;
@@ -358,20 +359,41 @@
             animation: rotate-moon 0.5s ease-out;
         }
         .product-card {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
             transform: translateY(20px);
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            background: #fff;
         }
         .product-card.show {
             opacity: 1;
             transform: translateY(0);
         }
-        .product-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .product-card .shopping-links {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
         }
-        .dark .product-card {
-            background: rgba(30, 41, 59, 0.85) !important;
+        .product-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            z-index: 50;
+        }
+        .product-card:hover .shopping-links {
+            max-height: 200px;
+            opacity: 1;
+        }
+        .product-card .card-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover .card-content {
+            background: inherit;
+            border-radius: inherit;
         }
         .dark .loader {
             border-color: #4B5563;
@@ -775,35 +797,32 @@
                     const searchProductType = encodeURIComponent(article.product_type_name.replace(/[^\w\s]/gi, ''));
                     
                     card.innerHTML = `
-                        <img src="https://placehold.co/400x480/e2e8f0/4a5568?text=${encodeURIComponent(article.prod_name || 'Product')}" 
-                             alt="${article.prod_name}" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-md text-gray-900 dark:text-white truncate">
-                                ${article.prod_name}
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                                ${article.product_type_name}
-                            </p>
-                            <p class="text-xs text-gray-400 dark:text-gray-500 mt-2">
-                                ID: ${article.article_id}
-                            </p>
-                            <div class="mt-4 space-y-2">
-                                <a href="https://www.amazon.com/s?k=${searchProductType}" 
-                                   target="_blank" 
-                                   class="flex items-center justify-center px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg transition-colors duration-200">
-                                   <i class="fab fa-amazon mr-2"></i> View on Amazon
-                                </a>
-                                <a href="https://www.flipkart.com/search?q=${searchProductType}" 
-                                   target="_blank" 
-                                   class="flex items-center justify-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors duration-200">
-                                   <i class="fas fa-shopping-cart mr-2"></i> Check on Flipkart
-                                </a>
-                                <a href="https://www.nordstrom.com/search?query=${searchProductType}" 
-                                   target="_blank" 
-                                   class="flex items-center justify-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-lg transition-colors duration-200">
-                                   <i class="fas fa-store mr-2"></i> Shop at Nordstrom
-                                </a>
+                        <div class="card-content">
+                            <img src="https://placehold.co/400x480/e2e8f0/4a5568?text=${encodeURIComponent(article.prod_name || 'Product')}" 
+                                 alt="${article.prod_name}" 
+                                 class="w-full h-48 object-cover">
+                            <div class="p-4 flex-grow">
+                                <h3 class="font-semibold text-md text-gray-900 dark:text-white truncate">
+                                    ${article.prod_name}
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                                    ${article.product_type_name}
+                                </p>
+                                <p class="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                                    ID: ${article.article_id}
+                                </p>
+                                <div class="shopping-links mt-4 space-y-2">
+                                    <a href="https://www.amazon.com/s?k=${searchProductType}" 
+                                       target="_blank" 
+                                       class="flex items-center justify-center px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg transition-colors duration-200">
+                                       <i class="fab fa-amazon mr-2"></i> View on Amazon
+                                    </a>
+                                    <a href="https://www.flipkart.com/search?q=${searchProductType}" 
+                                       target="_blank" 
+                                       class="flex items-center justify-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors duration-200">
+                                       <i class="fas fa-shopping-cart mr-2"></i> Check on Flipkart
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     `;

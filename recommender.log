@@ -281,3 +281,680 @@
 2025-07-11 14:55:07,665 - INFO -  * Debugger PIN: 101-216-444
 2025-07-11 14:56:24,338 - INFO - 127.0.0.1 - - [11/Jul/2025 14:56:24] "OPTIONS /recommend HTTP/1.1" 200 -
 2025-07-11 14:56:24,346 - INFO - 127.0.0.1 - - [11/Jul/2025 14:56:24] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:57:34,142 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:57:34,142 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:57:34,143 - INFO - Attempting to load data from cache...
+2025-07-11 14:57:34,145 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-11 14:57:34,158 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.183.51:5000
+2025-07-11 14:57:34,159 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 14:57:34,160 - INFO -  * Restarting with stat
+2025-07-11 14:57:39,050 - INFO - Found articles.csv (34.45 MB)
+2025-07-11 14:57:39,050 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-11 14:57:39,051 - INFO - Attempting to load data from cache...
+2025-07-11 14:57:39,053 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-11 14:57:39,058 - WARNING -  * Debugger is active!
+2025-07-11 14:57:39,065 - INFO -  * Debugger PIN: 101-216-444
+2025-07-11 14:57:39,099 - INFO - 127.0.0.1 - - [11/Jul/2025 14:57:39] "GET / HTTP/1.1" 200 -
+2025-07-11 14:57:39,282 - INFO - 127.0.0.1 - - [11/Jul/2025 14:57:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-11 14:57:41,795 - INFO - 127.0.0.1 - - [11/Jul/2025 14:57:41] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:58:18,874 - INFO - 127.0.0.1 - - [11/Jul/2025 14:58:18] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:58:19,576 - INFO - 127.0.0.1 - - [11/Jul/2025 14:58:19] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:58:26,622 - INFO - 127.0.0.1 - - [11/Jul/2025 14:58:26] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 14:59:06,332 - INFO - 127.0.0.1 - - [11/Jul/2025 14:59:06] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:59:06,942 - INFO - 127.0.0.1 - - [11/Jul/2025 14:59:06] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 14:59:10,858 - INFO - 127.0.0.1 - - [11/Jul/2025 14:59:10] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:01:11,382 - INFO - 127.0.0.1 - - [11/Jul/2025 15:01:11] "GET / HTTP/1.1" 200 -
+2025-07-11 15:01:13,862 - INFO - 127.0.0.1 - - [11/Jul/2025 15:01:13] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:03:12,820 - INFO - 127.0.0.1 - - [11/Jul/2025 15:03:12] "GET / HTTP/1.1" 200 -
+2025-07-11 15:03:14,897 - INFO - 127.0.0.1 - - [11/Jul/2025 15:03:14] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:04:46,232 - INFO - 127.0.0.1 - - [11/Jul/2025 15:04:46] "GET / HTTP/1.1" 200 -
+2025-07-11 15:04:48,278 - INFO - 127.0.0.1 - - [11/Jul/2025 15:04:48] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:07:03,315 - INFO - 127.0.0.1 - - [11/Jul/2025 15:07:03] "GET / HTTP/1.1" 200 -
+2025-07-11 15:07:08,079 - INFO - 127.0.0.1 - - [11/Jul/2025 15:07:08] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:09:24,675 - INFO - 127.0.0.1 - - [11/Jul/2025 15:09:24] "GET / HTTP/1.1" 200 -
+2025-07-11 15:09:39,794 - INFO - 127.0.0.1 - - [11/Jul/2025 15:09:39] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:13:06,269 - INFO - 127.0.0.1 - - [11/Jul/2025 15:13:06] "GET / HTTP/1.1" 200 -
+2025-07-11 15:13:09,012 - INFO - 127.0.0.1 - - [11/Jul/2025 15:13:09] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:13:09,292 - INFO - 127.0.0.1 - - [11/Jul/2025 15:13:09] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:15:47,384 - INFO - 127.0.0.1 - - [11/Jul/2025 15:15:47] "GET / HTTP/1.1" 200 -
+2025-07-11 15:16:05,947 - INFO - 127.0.0.1 - - [11/Jul/2025 15:16:05] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:17:52,945 - INFO - 127.0.0.1 - - [11/Jul/2025 15:17:52] "GET / HTTP/1.1" 200 -
+2025-07-11 15:17:56,624 - INFO - 127.0.0.1 - - [11/Jul/2025 15:17:56] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:19:58,042 - INFO - 127.0.0.1 - - [11/Jul/2025 15:19:58] "GET / HTTP/1.1" 200 -
+2025-07-11 15:20:00,742 - INFO - 127.0.0.1 - - [11/Jul/2025 15:20:00] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:21:58,086 - INFO - 127.0.0.1 - - [11/Jul/2025 15:21:58] "GET / HTTP/1.1" 200 -
+2025-07-11 15:22:00,914 - INFO - 127.0.0.1 - - [11/Jul/2025 15:22:00] "POST /recommend HTTP/1.1" 200 -
+2025-07-11 15:22:07,634 - INFO - 127.0.0.1 - - [11/Jul/2025 15:22:07] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 15:22:08,076 - INFO - 127.0.0.1 - - [11/Jul/2025 15:22:08] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 15:22:08,906 - INFO - 127.0.0.1 - - [11/Jul/2025 15:22:08] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-11 15:22:11,806 - INFO - 127.0.0.1 - - [11/Jul/2025 15:22:11] "POST /recommend HTTP/1.1" 200 -
+2025-07-13 18:15:15,694 - INFO - Found articles.csv (34.45 MB)
+2025-07-13 18:15:15,694 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-13 18:15:15,694 - INFO - Attempting to load data from cache...
+2025-07-13 18:15:15,741 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-13 18:15:15,775 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.183.51:5000
+2025-07-13 18:15:15,775 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-13 18:15:15,777 - INFO -  * Restarting with stat
+2025-07-13 18:15:21,773 - INFO - Found articles.csv (34.45 MB)
+2025-07-13 18:15:21,774 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-13 18:15:21,774 - INFO - Attempting to load data from cache...
+2025-07-13 18:15:21,846 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-13 18:15:21,858 - WARNING -  * Debugger is active!
+2025-07-13 18:15:21,870 - INFO -  * Debugger PIN: 101-216-444
+2025-07-13 18:15:22,030 - INFO - 192.168.183.51 - - [13/Jul/2025 18:15:22] "GET / HTTP/1.1" 200 -
+2025-07-13 18:15:22,816 - INFO - 192.168.183.51 - - [13/Jul/2025 18:15:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-13 18:15:27,748 - INFO - 127.0.0.1 - - [13/Jul/2025 18:15:27] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-13 18:15:27,759 - INFO - 127.0.0.1 - - [13/Jul/2025 18:15:27] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:15:39,383 - INFO - 127.0.0.1 - - [13/Jul/2025 18:15:39] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-13 18:15:39,409 - INFO - 127.0.0.1 - - [13/Jul/2025 18:15:39] "POST /recommend HTTP/1.1" 200 -
+2025-07-13 18:15:59,222 - INFO - 127.0.0.1 - - [13/Jul/2025 18:15:59] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-13 18:15:59,238 - INFO - 127.0.0.1 - - [13/Jul/2025 18:15:59] "POST /recommend HTTP/1.1" 200 -
+2025-07-13 18:16:09,003 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:09] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-13 18:16:09,008 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:09] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:09,674 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:09] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:10,027 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:10] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:10,404 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:10] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:10,674 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:10] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:10,936 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:10] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:12,171 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:12] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:26,426 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:26] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-13 18:16:26,432 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:26] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:27,738 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:27] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:27,954 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:27] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-13 18:16:32,007 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:32] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-13 18:16:32,016 - INFO - 127.0.0.1 - - [13/Jul/2025 18:16:32] "POST /recommend HTTP/1.1" 200 -
+2025-07-16 13:57:39,467 - INFO - Found articles.csv (34.45 MB)
+2025-07-16 13:57:39,468 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-16 13:57:39,468 - INFO - Attempting to load data from cache...
+2025-07-16 13:57:39,527 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-16 13:57:39,586 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.96.218.51:5000
+2025-07-16 13:57:39,587 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 13:57:39,589 - INFO -  * Restarting with stat
+2025-07-16 13:57:46,295 - INFO - Found articles.csv (34.45 MB)
+2025-07-16 13:57:46,295 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-16 13:57:46,295 - INFO - Attempting to load data from cache...
+2025-07-16 13:57:46,298 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-16 13:57:46,306 - WARNING -  * Debugger is active!
+2025-07-16 13:57:46,320 - INFO -  * Debugger PIN: 101-216-444
+2025-07-16 13:57:48,009 - INFO - 10.96.218.51 - - [16/Jul/2025 13:57:48] "GET / HTTP/1.1" 200 -
+2025-07-16 13:57:50,017 - INFO - 10.96.218.51 - - [16/Jul/2025 13:57:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-16 13:58:49,842 - INFO - Found articles.csv (34.45 MB)
+2025-07-16 13:58:49,842 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-16 13:58:49,842 - INFO - Attempting to load data from cache...
+2025-07-16 13:58:49,842 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-07-16 13:58:49,842 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-07-16 13:58:49,842 - INFO - Step 1: Loading and preprocessing data...
+2025-07-16 13:58:50,168 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-07-16 13:58:50,177 - INFO - Successfully loaded transactions_train.csv with shape: (501, 5)
+2025-07-16 13:58:50,183 - INFO - Sampled 132 customers from 132 total customers
+2025-07-16 13:58:50,185 - INFO - Got 501 transactions for sampled customers
+2025-07-16 13:58:50,190 - INFO - Found 401 unique articles in sampled transactions
+2025-07-16 13:58:50,196 - INFO - Got details for 401 articles
+2025-07-16 13:58:50,200 - INFO - Step 2: Generating text embeddings with BERT...
+2025-07-16 13:58:50,201 - INFO - Use pytorch device_name: cpu
+2025-07-16 13:58:50,201 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-16 13:58:58,120 - INFO - Generated embeddings with shape: (401, 384)
+2025-07-16 13:58:58,120 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-07-16 13:58:58,121 - INFO - Nearest Neighbors model trained successfully
+2025-07-16 13:58:58,122 - INFO - Created cache directory
+2025-07-16 13:58:58,122 - INFO - Saving data to cache...
+2025-07-16 13:58:58,125 - INFO - Successfully saved data to cache!
+2025-07-16 13:58:58,125 - INFO - Recommendation system initialized and ready.
+2025-07-16 13:58:58,144 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.96.218.51:5000
+2025-07-16 13:58:58,144 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 13:58:58,145 - INFO -  * Restarting with stat
+2025-07-16 13:59:03,090 - INFO - Found articles.csv (34.45 MB)
+2025-07-16 13:59:03,091 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-16 13:59:03,091 - INFO - Attempting to load data from cache...
+2025-07-16 13:59:03,176 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-16 13:59:03,182 - WARNING -  * Debugger is active!
+2025-07-16 13:59:03,188 - INFO -  * Debugger PIN: 101-216-444
+2025-07-16 13:59:03,225 - INFO - 10.96.218.51 - - [16/Jul/2025 13:59:03] "[36mGET / HTTP/1.1[0m" 304 -
+2025-07-16 13:59:51,625 - INFO - 127.0.0.1 - - [16/Jul/2025 13:59:51] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-16 13:59:51,631 - INFO - 127.0.0.1 - - [16/Jul/2025 13:59:51] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-16 13:59:52,349 - INFO - 127.0.0.1 - - [16/Jul/2025 13:59:52] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-16 13:59:58,973 - INFO - 127.0.0.1 - - [16/Jul/2025 13:59:58] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-16 13:59:58,979 - INFO - 127.0.0.1 - - [16/Jul/2025 13:59:58] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-07-16 14:00:15,059 - INFO - 127.0.0.1 - - [16/Jul/2025 14:00:15] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-16 14:00:15,072 - INFO - 127.0.0.1 - - [16/Jul/2025 14:00:15] "POST /recommend HTTP/1.1" 200 -
+2025-07-16 14:00:21,740 - INFO - 127.0.0.1 - - [16/Jul/2025 14:00:21] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-16 14:00:21,751 - INFO - 127.0.0.1 - - [16/Jul/2025 14:00:21] "POST /recommend HTTP/1.1" 200 -
+2025-07-16 14:01:11,092 - INFO - 127.0.0.1 - - [16/Jul/2025 14:01:11] "OPTIONS /recommend HTTP/1.1" 200 -
+2025-07-16 14:01:11,106 - INFO - 127.0.0.1 - - [16/Jul/2025 14:01:11] "POST /recommend HTTP/1.1" 200 -
+2025-07-30 09:31:23,136 - INFO - Found articles.csv (34.45 MB)
+2025-07-30 09:31:23,138 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-30 09:31:23,138 - INFO - Attempting to load data from cache...
+2025-07-30 09:31:23,211 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-30 09:31:23,288 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.156.215.51:5000
+2025-07-30 09:31:23,289 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 09:31:23,293 - INFO -  * Restarting with stat
+2025-07-30 09:31:29,972 - INFO - Found articles.csv (34.45 MB)
+2025-07-30 09:31:29,973 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-30 09:31:29,973 - INFO - Attempting to load data from cache...
+2025-07-30 09:31:29,976 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-30 09:31:29,983 - WARNING -  * Debugger is active!
+2025-07-30 09:31:29,999 - INFO -  * Debugger PIN: 135-792-894
+2025-07-30 09:31:39,230 - INFO - 10.156.215.51 - - [30/Jul/2025 09:31:39] "GET / HTTP/1.1" 200 -
+2025-07-30 09:31:42,216 - INFO - 10.156.215.51 - - [30/Jul/2025 09:31:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-30 09:32:26,754 - INFO - Found articles.csv (34.45 MB)
+2025-07-30 09:32:26,754 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-30 09:32:26,754 - INFO - Attempting to load data from cache...
+2025-07-30 09:32:26,754 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-07-30 09:32:26,755 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-07-30 09:32:26,755 - INFO - Step 1: Loading and preprocessing data...
+2025-07-30 09:32:27,087 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-07-30 09:32:27,098 - INFO - Successfully loaded transactions_train.csv with shape: (501, 5)
+2025-07-30 09:32:27,110 - INFO - Sampled 132 customers from 132 total customers
+2025-07-30 09:32:27,112 - INFO - Got 501 transactions for sampled customers
+2025-07-30 09:32:27,115 - INFO - Found 401 unique articles in sampled transactions
+2025-07-30 09:32:27,123 - INFO - Got details for 401 articles
+2025-07-30 09:32:27,135 - INFO - Step 2: Generating text embeddings with BERT...
+2025-07-30 09:32:27,138 - INFO - Use pytorch device_name: cpu
+2025-07-30 09:32:27,138 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-30 09:32:39,680 - INFO - Generated embeddings with shape: (401, 384)
+2025-07-30 09:32:39,681 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-07-30 09:32:39,682 - INFO - Nearest Neighbors model trained successfully
+2025-07-30 09:32:39,683 - INFO - Created cache directory
+2025-07-30 09:32:39,683 - INFO - Saving data to cache...
+2025-07-30 09:32:39,692 - INFO - Successfully saved data to cache!
+2025-07-30 09:32:39,693 - INFO - Recommendation system initialized and ready.
+2025-07-30 09:32:39,713 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.156.215.51:5000
+2025-07-30 09:32:39,713 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 09:32:39,715 - INFO -  * Restarting with stat
+2025-07-30 09:32:51,690 - INFO - Found articles.csv (34.45 MB)
+2025-07-30 09:32:51,690 - INFO - Found transactions_train.csv (0.05 MB)
+2025-07-30 09:32:51,691 - INFO - Attempting to load data from cache...
+2025-07-30 09:32:51,855 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-07-30 09:32:51,887 - WARNING -  * Debugger is active!
+2025-07-30 09:32:51,911 - INFO -  * Debugger PIN: 135-792-894
+2025-07-30 09:32:52,074 - INFO - 10.156.215.51 - - [30/Jul/2025 09:32:52] "[36mGET / HTTP/1.1[0m" 304 -
+2025-07-30 09:33:00,675 - INFO - 127.0.0.1 - - [30/Jul/2025 09:33:00] "GET / HTTP/1.1" 200 -
+2025-07-30 09:33:03,035 - INFO - 127.0.0.1 - - [30/Jul/2025 09:33:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-30 09:33:05,030 - INFO - 127.0.0.1 - - [30/Jul/2025 09:33:05] "POST /recommend HTTP/1.1" 200 -
+2025-08-04 15:06:11,217 - INFO - Found articles.csv (34.45 MB)
+2025-08-04 15:06:11,217 - INFO - Found transactions_train.csv (0.05 MB)
+2025-08-04 15:06:11,218 - INFO - Attempting to load data from cache...
+2025-08-04 15:06:11,218 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-08-04 15:06:11,218 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-08-04 15:06:11,218 - INFO - Step 1: Loading and preprocessing data...
+2025-08-04 15:06:11,512 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-08-04 15:06:11,521 - INFO - Successfully loaded transactions_train.csv with shape: (501, 5)
+2025-08-04 15:06:11,526 - INFO - Sampled 132 customers from 132 total customers
+2025-08-04 15:06:11,528 - INFO - Got 501 transactions for sampled customers
+2025-08-04 15:06:11,530 - INFO - Found 401 unique articles in sampled transactions
+2025-08-04 15:06:11,534 - INFO - Got details for 401 articles
+2025-08-04 15:06:11,539 - INFO - Step 2: Generating text embeddings with BERT...
+2025-08-04 15:06:11,541 - INFO - Use pytorch device_name: cpu
+2025-08-04 15:06:11,541 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-04 15:06:23,980 - INFO - Generated embeddings with shape: (401, 384)
+2025-08-04 15:06:23,980 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-08-04 15:06:23,981 - INFO - Nearest Neighbors model trained successfully
+2025-08-04 15:06:23,981 - INFO - Created cache directory
+2025-08-04 15:06:23,981 - INFO - Saving data to cache...
+2025-08-04 15:06:23,985 - INFO - Successfully saved data to cache!
+2025-08-04 15:06:23,985 - INFO - Recommendation system initialized and ready.
+2025-08-04 15:06:24,016 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.98.121.51:5000
+2025-08-04 15:06:24,016 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-04 15:06:24,019 - INFO -  * Restarting with stat
+2025-08-04 15:06:28,997 - INFO - Found articles.csv (34.45 MB)
+2025-08-04 15:06:28,997 - INFO - Found transactions_train.csv (0.05 MB)
+2025-08-04 15:06:28,997 - INFO - Attempting to load data from cache...
+2025-08-04 15:06:29,070 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-08-04 15:06:29,076 - WARNING -  * Debugger is active!
+2025-08-04 15:06:29,083 - INFO -  * Debugger PIN: 101-216-444
+2025-08-04 15:07:18,977 - INFO - 10.98.121.51 - - [04/Aug/2025 15:07:18] "GET / HTTP/1.1" 200 -
+2025-08-04 15:07:21,774 - INFO - 10.98.121.51 - - [04/Aug/2025 15:07:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-06 09:28:44,291 - INFO - Found articles.csv (34.45 MB)
+2025-08-06 09:28:44,291 - INFO - Found transactions_train.csv (0.05 MB)
+2025-08-06 09:28:44,291 - INFO - Attempting to load data from cache...
+2025-08-06 09:28:44,292 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-08-06 09:28:44,292 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-08-06 09:28:44,292 - INFO - Step 1: Loading and preprocessing data...
+2025-08-06 09:28:44,614 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-08-06 09:28:44,617 - INFO - Successfully loaded transactions_train.csv with shape: (501, 5)
+2025-08-06 09:28:44,624 - INFO - Sampled 132 customers from 132 total customers
+2025-08-06 09:28:44,626 - INFO - Got 501 transactions for sampled customers
+2025-08-06 09:28:44,628 - INFO - Found 401 unique articles in sampled transactions
+2025-08-06 09:28:44,636 - INFO - Got details for 401 articles
+2025-08-06 09:28:44,643 - INFO - Step 2: Generating text embeddings with BERT...
+2025-08-06 09:28:44,644 - INFO - Use pytorch device_name: cpu
+2025-08-06 09:28:44,645 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-06 09:29:32,790 - INFO - Generated embeddings with shape: (401, 384)
+2025-08-06 09:29:32,791 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-08-06 09:29:32,791 - INFO - Nearest Neighbors model trained successfully
+2025-08-06 09:29:32,792 - INFO - Created cache directory
+2025-08-06 09:29:32,793 - INFO - Saving data to cache...
+2025-08-06 09:29:32,797 - INFO - Successfully saved data to cache!
+2025-08-06 09:29:32,798 - INFO - Recommendation system initialized and ready.
+2025-08-06 09:29:32,865 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.98.121.51:5000
+2025-08-06 09:29:32,866 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-06 09:29:32,869 - INFO -  * Restarting with stat
+2025-08-06 09:29:42,553 - INFO - Found articles.csv (34.45 MB)
+2025-08-06 09:29:42,553 - INFO - Found transactions_train.csv (0.05 MB)
+2025-08-06 09:29:42,554 - INFO - Attempting to load data from cache...
+2025-08-06 09:29:42,698 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-08-06 09:29:42,709 - WARNING -  * Debugger is active!
+2025-08-06 09:29:42,727 - INFO -  * Debugger PIN: 101-216-444
+2025-08-06 09:29:42,876 - INFO - 10.98.121.51 - - [06/Aug/2025 09:29:42] "[36mGET / HTTP/1.1[0m" 304 -
+2025-08-06 09:29:47,654 - INFO - 10.98.121.51 - - [06/Aug/2025 09:29:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-06 09:30:22,542 - INFO - 127.0.0.1 - - [06/Aug/2025 09:30:22] "[36mGET / HTTP/1.1[0m" 304 -
+2025-08-06 09:30:27,693 - INFO - 127.0.0.1 - - [06/Aug/2025 09:30:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-06 09:30:34,229 - INFO - 127.0.0.1 - - [06/Aug/2025 09:30:34] "POST /recommend HTTP/1.1" 200 -
+2025-10-14 13:17:57,182 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:17:57,183 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:17:57,183 - INFO - Attempting to load data from cache...
+2025-10-14 13:17:57,184 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-10-14 13:17:57,184 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-10-14 13:17:57,184 - INFO - Step 1: Loading and preprocessing data...
+2025-10-14 13:17:57,472 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-10-14 13:17:57,474 - INFO - Successfully loaded transactions_train.csv with shape: (501, 5)
+2025-10-14 13:17:57,475 - INFO - Sampled 132 customers from 132 total customers
+2025-10-14 13:17:57,476 - INFO - Got 501 transactions for sampled customers
+2025-10-14 13:17:57,476 - INFO - Found 401 unique articles in sampled transactions
+2025-10-14 13:17:57,478 - INFO - Got details for 401 articles
+2025-10-14 13:17:57,482 - INFO - Step 2: Generating text embeddings with BERT...
+2025-10-14 13:17:57,484 - INFO - Use pytorch device_name: cpu
+2025-10-14 13:17:57,484 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 13:18:06,589 - INFO - Generated embeddings with shape: (401, 384)
+2025-10-14 13:18:06,589 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-10-14 13:18:06,590 - INFO - Nearest Neighbors model trained successfully
+2025-10-14 13:18:06,592 - INFO - Created cache directory
+2025-10-14 13:18:06,592 - INFO - Saving data to cache...
+2025-10-14 13:18:06,596 - INFO - Successfully saved data to cache!
+2025-10-14 13:18:06,597 - INFO - Recommendation system initialized and ready.
+2025-10-14 13:18:06,614 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.110.180.51:5000
+2025-10-14 13:18:06,614 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 13:18:06,625 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:18:12,221 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:18:12,221 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:18:12,221 - INFO - Attempting to load data from cache...
+2025-10-14 13:18:13,507 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:18:13,525 - WARNING -  * Debugger is active!
+2025-10-14 13:18:13,527 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:18:13,593 - INFO - 10.110.180.51 - - [14/Oct/2025 13:18:13] "GET / HTTP/1.1" 200 -
+2025-10-14 13:19:16,170 - INFO - 127.0.0.1 - - [14/Oct/2025 13:19:16] "GET / HTTP/1.1" 200 -
+2025-10-14 13:19:17,358 - INFO - 127.0.0.1 - - [14/Oct/2025 13:19:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-14 13:19:19,487 - INFO - 127.0.0.1 - - [14/Oct/2025 13:19:19] "POST /recommend HTTP/1.1" 200 -
+2025-10-14 13:19:39,183 - INFO - 127.0.0.1 - - [14/Oct/2025 13:19:39] "POST /recommend HTTP/1.1" 200 -
+2025-10-14 13:21:13,095 - INFO - 127.0.0.1 - - [14/Oct/2025 13:21:13] "POST /recommend HTTP/1.1" 200 -
+2025-10-14 13:22:56,158 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\sparse\\_matrix.py', reloading
+2025-10-14 13:22:56,287 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\pickle.py', reloading
+2025-10-14 13:22:57,928 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:23:07,744 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:23:07,744 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:23:07,745 - INFO - Attempting to load data from cache...
+2025-10-14 13:23:07,750 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:23:07,788 - WARNING -  * Debugger is active!
+2025-10-14 13:23:07,795 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:24:04,618 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\matplotlib\\backends\\__init__.py', reloading
+2025-10-14 13:24:04,694 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\matplotlib\\category.py', reloading
+2025-10-14 13:24:04,866 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\matplotlib\\dates.py', reloading
+2025-10-14 13:24:05,989 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:24:10,211 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:24:10,212 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:24:10,212 - INFO - Attempting to load data from cache...
+2025-10-14 13:24:10,216 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:24:10,244 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.110.180.51:5000
+2025-10-14 13:24:10,245 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 13:24:10,260 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:24:13,680 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:24:13,681 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:24:13,681 - INFO - Attempting to load data from cache...
+2025-10-14 13:24:13,686 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:24:13,699 - WARNING -  * Debugger is active!
+2025-10-14 13:24:13,701 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:24:13,736 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\fill_mask.py', reloading
+2025-10-14 13:24:13,757 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_classification.py', reloading
+2025-10-14 13:24:13,772 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_segmentation.py', reloading
+2025-10-14 13:24:13,788 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_to_image.py', reloading
+2025-10-14 13:24:13,812 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_to_text.py', reloading
+2025-10-14 13:24:13,824 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\object_detection.py', reloading
+2025-10-14 13:24:13,836 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\table_question_answering.py', reloading
+2025-10-14 13:24:13,849 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\question_answering.py', reloading
+2025-10-14 13:24:13,867 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\sentence_similarity.py', reloading
+2025-10-14 13:24:13,889 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\summarization.py', reloading
+2025-10-14 13:24:13,906 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text2text_generation.py', reloading
+2025-10-14 13:24:13,924 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text_classification.py', reloading
+2025-10-14 13:24:13,943 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text_generation.py', reloading
+2025-10-14 13:24:13,957 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text_to_audio.py', reloading
+2025-10-14 13:24:13,983 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text_to_image.py', reloading
+2025-10-14 13:24:14,003 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text_to_speech.py', reloading
+2025-10-14 13:24:14,027 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text_to_video.py', reloading
+2025-10-14 13:24:14,039 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\token_classification.py', reloading
+2025-10-14 13:24:14,059 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\translation.py', reloading
+2025-10-14 13:24:14,085 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\video_classification.py', reloading
+2025-10-14 13:24:14,104 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\visual_question_answering.py', reloading
+2025-10-14 13:24:14,127 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\zero_shot_classification.py', reloading
+2025-10-14 13:24:14,150 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\zero_shot_image_classification.py', reloading
+2025-10-14 13:24:14,175 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\zero_shot_object_detection.py', reloading
+2025-10-14 13:24:14,187 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_mcp\\agent.py', reloading
+2025-10-14 13:24:14,201 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_mcp\\mcp_client.py', reloading
+2025-10-14 13:24:14,229 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\inference_api.py', reloading
+2025-10-14 13:24:14,255 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\keras_mixin.py', reloading
+2025-10-14 13:24:14,275 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\repocard.py', reloading
+2025-10-14 13:24:14,305 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\repository.py', reloading
+2025-10-14 13:24:14,324 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\serialization\\__init__.py', reloading
+2025-10-14 13:24:14,340 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\serialization\\_base.py', reloading
+2025-10-14 13:24:14,357 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\serialization\\_tensorflow.py', reloading
+2025-10-14 13:24:14,383 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\serialization\\_torch.py', reloading
+2025-10-14 13:24:14,398 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\serialization\\_dduf.py', reloading
+2025-10-14 13:24:14,422 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_cache_manager.py', reloading
+2025-10-14 13:24:14,439 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_hf_folder.py', reloading
+2025-10-14 13:24:14,456 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_cache_assets.py', reloading
+2025-10-14 13:24:14,487 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py', reloading
+2025-10-14 13:24:14,519 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_runtime.py', reloading
+2025-10-14 13:24:14,533 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\huggingface_hub\\utils\\_auth.py', reloading
+2025-10-14 13:24:14,553 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\__init__.py', reloading
+2025-10-14 13:24:14,578 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\core.py', reloading
+2025-10-14 13:24:14,601 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\intranges.py', reloading
+2025-10-14 13:24:14,619 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\idna\\package_data.py', reloading
+2025-10-14 13:24:14,646 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\importlib_metadata\\__init__.py', reloading
+2025-10-14 13:24:14,673 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\importlib_metadata\\_meta.py', reloading
+2025-10-14 13:24:14,688 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\__init__.py', reloading
+2025-10-14 13:24:14,706 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\encoding.py', reloading
+2025-10-14 13:24:14,725 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\itsdangerous\\exc.py', reloading
+2025-10-14 13:24:15,418 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:24:17,644 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:24:17,645 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:24:17,645 - INFO - Attempting to load data from cache...
+2025-10-14 13:24:17,647 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:24:17,657 - WARNING -  * Debugger is active!
+2025-10-14 13:24:17,661 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:24:17,689 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\qiskit\\compiler\\__init__.py', reloading
+2025-10-14 13:24:17,708 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\qiskit\\compiler\\transpiler.py', reloading
+2025-10-14 13:24:17,732 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\qiskit\\transpiler\\preset_passmanagers\\__init__.py', reloading
+2025-10-14 13:24:17,750 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\qiskit\\transpiler\\preset_passmanagers\\generate_preset_pass_manager.py', reloading
+2025-10-14 13:24:17,771 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\qiskit_aer\\__init__.py', reloading
+2025-10-14 13:24:17,786 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\referencing\\__init__.py', reloading
+2025-10-14 13:24:17,810 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\referencing\\_core.py', reloading
+2025-10-14 13:24:17,840 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\rsa\\__init__.py', reloading
+2025-10-14 13:24:17,856 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\rsa\\key.py', reloading
+2025-10-14 13:24:17,880 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\rsa\\pkcs1.py', reloading
+2025-10-14 13:24:17,968 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\cluster\\__init__.py', reloading
+2025-10-14 13:24:17,985 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\conftest.py', reloading
+2025-10-14 13:24:17,998 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\constants\\__init__.py', reloading
+2025-10-14 13:24:18,016 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\constants\\_codata.py', reloading
+2025-10-14 13:24:18,053 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\constants\\_constants.py', reloading
+2025-10-14 13:24:18,070 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\datasets\\__init__.py', reloading
+2025-10-14 13:24:18,087 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\datasets\\_fetchers.py', reloading
+2025-10-14 13:24:18,104 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\datasets\\_download_all.py', reloading
+2025-10-14 13:24:18,123 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\datasets\\_utils.py', reloading
+2025-10-14 13:24:18,137 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\differentiate\\__init__.py', reloading
+2025-10-14 13:24:18,157 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\differentiate\\_differentiate.py', reloading
+2025-10-14 13:24:18,182 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\__init__.py', reloading
+2025-10-14 13:24:18,216 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\_basic.py', reloading
+2025-10-14 13:24:18,251 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\_realtransforms.py', reloading
+2025-10-14 13:24:18,273 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\_fftlog.py', reloading
+2025-10-14 13:24:18,289 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\_fftlog_backend.py', reloading
+2025-10-14 13:24:18,316 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\_helper.py', reloading
+2025-10-14 13:24:18,332 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\_backend.py', reloading
+2025-10-14 13:24:18,353 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\fft\\_pocketfft\\helper.py', reloading
+2025-10-14 13:24:18,377 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\integrate\\__init__.py', reloading
+2025-10-14 13:24:18,394 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\integrate\\_quadrature.py', reloading
+2025-10-14 13:24:18,421 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\integrate\\_odepack_py.py', reloading
+2025-10-14 13:24:18,442 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\integrate\\_quadpack_py.py', reloading
+2025-10-14 13:24:18,465 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\integrate\\_ode.py', reloading
+2025-10-14 13:24:18,486 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\__init__.py', reloading
+2025-10-14 13:24:18,515 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\_interpolate.py', reloading
+2025-10-14 13:24:18,549 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\_fitpack_py.py', reloading
+2025-10-14 13:24:18,582 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\_fitpack2.py', reloading
+2025-10-14 13:24:18,603 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\_rbfinterp.py', reloading
+2025-10-14 13:24:18,631 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\_polyint.py', reloading
+2025-10-14 13:24:18,658 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\_cubic.py', reloading
+2025-10-14 13:24:18,677 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\scipy\\interpolate\\_ndgriddata.py', reloading
+2025-10-14 13:24:19,399 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:24:23,704 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:24:23,704 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:24:23,704 - INFO - Attempting to load data from cache...
+2025-10-14 13:24:23,707 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:24:23,716 - WARNING -  * Debugger is active!
+2025-10-14 13:24:23,717 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:24:23,762 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\__init__.py', reloading
+2025-10-14 13:24:23,789 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\deta\\__init__.py', reloading
+2025-10-14 13:24:23,821 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\efficientformer\\__init__.py', reloading
+2025-10-14 13:24:23,846 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\ernie_m\\__init__.py', reloading
+2025-10-14 13:24:23,874 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\gptsan_japanese\\__init__.py', reloading
+2025-10-14 13:24:23,896 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\graphormer\\__init__.py', reloading
+2025-10-14 13:24:23,920 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\jukebox\\__init__.py', reloading
+2025-10-14 13:24:23,950 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\mctct\\__init__.py', reloading
+2025-10-14 13:24:23,973 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\mega\\__init__.py', reloading
+2025-10-14 13:24:23,998 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\mmbt\\__init__.py', reloading
+2025-10-14 13:24:24,021 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\nat\\__init__.py', reloading
+2025-10-14 13:24:24,043 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\nezha\\__init__.py', reloading
+2025-10-14 13:24:24,068 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\open_llama\\__init__.py', reloading
+2025-10-14 13:24:24,094 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\qdqbert\\__init__.py', reloading
+2025-10-14 13:24:24,122 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\realm\\__init__.py', reloading
+2025-10-14 13:24:24,155 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\retribert\\__init__.py', reloading
+2025-10-14 13:24:24,174 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\speech_to_text_2\\__init__.py', reloading
+2025-10-14 13:24:24,196 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\tapex\\__init__.py', reloading
+2025-10-14 13:24:24,216 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\trajectory_transformer\\__init__.py', reloading
+2025-10-14 13:24:24,236 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\transfo_xl\\__init__.py', reloading
+2025-10-14 13:24:24,263 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\tvlt\\__init__.py', reloading
+2025-10-14 13:24:24,292 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\van\\__init__.py', reloading
+2025-10-14 13:24:24,317 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\vit_hybrid\\__init__.py', reloading
+2025-10-14 13:24:24,350 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\deprecated\\xlm_prophetnet\\__init__.py', reloading
+2025-10-14 13:24:24,375 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\depth_anything\\__init__.py', reloading
+2025-10-14 13:24:24,394 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\depth_pro\\__init__.py', reloading
+2025-10-14 13:24:24,413 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\detr\\__init__.py', reloading
+2025-10-14 13:24:24,452 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\dia\\__init__.py', reloading
+2025-10-14 13:24:24,507 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\diffllama\\__init__.py', reloading
+2025-10-14 13:24:24,527 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\dinat\\__init__.py', reloading
+2025-10-14 13:24:24,551 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\dinov2\\__init__.py', reloading
+2025-10-14 13:24:24,576 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\dinov2_with_registers\\__init__.py', reloading
+2025-10-14 13:24:24,598 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\distilbert\\__init__.py', reloading
+2025-10-14 13:24:24,631 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\donut\\__init__.py', reloading
+2025-10-14 13:24:24,658 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\dots1\\__init__.py', reloading
+2025-10-14 13:24:24,684 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\dpr\\__init__.py', reloading
+2025-10-14 13:24:24,714 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\dpt\\__init__.py', reloading
+2025-10-14 13:24:25,394 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:24:27,308 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:24:27,309 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:24:27,309 - INFO - Attempting to load data from cache...
+2025-10-14 13:24:27,312 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:24:27,325 - WARNING -  * Debugger is active!
+2025-10-14 13:24:27,329 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:24:27,378 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\moonshine\\__init__.py', reloading
+2025-10-14 13:24:27,404 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\moshi\\__init__.py', reloading
+2025-10-14 13:24:27,432 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\mpnet\\__init__.py', reloading
+2025-10-14 13:24:27,465 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\mpt\\__init__.py', reloading
+2025-10-14 13:24:27,485 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\mra\\__init__.py', reloading
+2025-10-14 13:24:27,510 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\mt5\\__init__.py', reloading
+2025-10-14 13:24:27,533 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\musicgen\\__init__.py', reloading
+2025-10-14 13:24:27,562 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\musicgen_melody\\__init__.py', reloading
+2025-10-14 13:24:27,587 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\mvp\\__init__.py', reloading
+2025-10-14 13:24:27,616 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\myt5\\__init__.py', reloading
+2025-10-14 13:24:27,631 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\nemotron\\__init__.py', reloading
+2025-10-14 13:24:27,647 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\nllb\\__init__.py', reloading
+2025-10-14 13:24:27,673 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\nllb_moe\\__init__.py', reloading
+2025-10-14 13:24:27,697 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\nougat\\__init__.py', reloading
+2025-10-14 13:24:27,716 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\nystromformer\\__init__.py', reloading
+2025-10-14 13:24:27,740 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\olmo\\__init__.py', reloading
+2025-10-14 13:24:27,759 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\olmo2\\__init__.py', reloading
+2025-10-14 13:24:27,777 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\olmoe\\__init__.py', reloading
+2025-10-14 13:24:27,803 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\omdet_turbo\\__init__.py', reloading
+2025-10-14 13:24:27,835 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\oneformer\\__init__.py', reloading
+2025-10-14 13:24:27,864 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\openai\\__init__.py', reloading
+2025-10-14 13:24:27,893 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\opt\\__init__.py', reloading
+2025-10-14 13:24:27,924 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\owlv2\\__init__.py', reloading
+2025-10-14 13:24:27,953 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\owlvit\\__init__.py', reloading
+2025-10-14 13:24:27,986 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\paligemma\\__init__.py', reloading
+2025-10-14 13:24:28,012 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\patchtsmixer\\__init__.py', reloading
+2025-10-14 13:24:28,032 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\patchtst\\__init__.py', reloading
+2025-10-14 13:24:28,063 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\pegasus\\__init__.py', reloading
+2025-10-14 13:24:28,100 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\pegasus_x\\__init__.py', reloading
+2025-10-14 13:24:28,120 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\perceiver\\__init__.py', reloading
+2025-10-14 13:24:28,152 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\persimmon\\__init__.py', reloading
+2025-10-14 13:24:28,176 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\phi\\__init__.py', reloading
+2025-10-14 13:24:28,197 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\phi3\\__init__.py', reloading
+2025-10-14 13:24:28,225 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\phi4_multimodal\\__init__.py', reloading
+2025-10-14 13:24:28,257 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\phimoe\\__init__.py', reloading
+2025-10-14 13:24:28,280 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\phobert\\__init__.py', reloading
+2025-10-14 13:24:28,303 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\pix2struct\\__init__.py', reloading
+2025-10-14 13:24:28,337 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\transformers\\models\\pixtral\\__init__.py', reloading
+2025-10-14 13:24:29,043 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:24:32,969 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:24:32,969 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:24:32,970 - INFO - Attempting to load data from cache...
+2025-10-14 13:24:32,973 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:24:32,981 - WARNING -  * Debugger is active!
+2025-10-14 13:24:32,983 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:24:35,945 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:24:35,946 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:24:35,946 - INFO - Attempting to load data from cache...
+2025-10-14 13:24:35,948 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:24:35,959 - WARNING -  * Debugger is active!
+2025-10-14 13:24:35,962 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:31:05,822 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\metrics\\_regression.py', reloading
+2025-10-14 13:31:05,822 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\metrics\\_regression.py', reloading
+2025-10-14 13:31:05,842 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\model_selection\\__init__.py', reloading
+2025-10-14 13:31:05,865 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\model_selection\\_split.py', reloading
+2025-10-14 13:31:06,800 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:31:07,230 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:31:53,893 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:31:53,894 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:31:53,894 - INFO - Attempting to load data from cache...
+2025-10-14 13:31:54,100 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:31:54,101 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:31:54,101 - INFO - Attempting to load data from cache...
+2025-10-14 13:31:55,136 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:31:55,159 - WARNING -  * Debugger is active!
+2025-10-14 13:31:55,164 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:31:55,164 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:32:42,298 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\compat\\numpy\\__init__.py', reloading
+2025-10-14 13:32:42,299 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\compat\\numpy\\__init__.py', reloading
+2025-10-14 13:32:42,343 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\compat\\numpy\\function.py', reloading
+2025-10-14 13:32:42,343 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\compat\\numpy\\function.py', reloading
+2025-10-14 13:32:42,377 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\nanops.py', reloading
+2025-10-14 13:32:43,396 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:32:43,401 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:32:51,968 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:32:51,968 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:32:51,968 - INFO - Attempting to load data from cache...
+2025-10-14 13:32:51,973 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:32:51,987 - WARNING -  * Debugger is active!
+2025-10-14 13:32:51,990 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:32:52,010 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:32:52,010 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:32:52,011 - INFO - Attempting to load data from cache...
+2025-10-14 13:32:52,014 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:32:52,034 - WARNING -  * Debugger is active!
+2025-10-14 13:32:52,040 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:33:03,889 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\io\\formats\\__init__.py', reloading
+2025-10-14 13:33:03,921 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\io\\formats\\format.py', reloading
+2025-10-14 13:33:03,922 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\io\\formats\\format.py', reloading
+2025-10-14 13:33:04,923 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:33:05,000 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:33:13,994 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:33:13,994 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:33:13,994 - INFO - Attempting to load data from cache...
+2025-10-14 13:33:13,997 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:33:14,010 - WARNING -  * Debugger is active!
+2025-10-14 13:33:14,011 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:33:14,595 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:33:14,595 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:33:14,595 - INFO - Attempting to load data from cache...
+2025-10-14 13:33:14,599 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:33:14,620 - WARNING -  * Debugger is active!
+2025-10-14 13:33:14,622 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:33:33,141 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\reshape\\api.py', reloading
+2025-10-14 13:33:33,141 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\reshape\\api.py', reloading
+2025-10-14 13:33:33,156 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\reshape\\tile.py', reloading
+2025-10-14 13:33:33,156 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\reshape\\tile.py', reloading
+2025-10-14 13:33:33,248 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\arrays\\categorical.py', reloading
+2025-10-14 13:33:33,248 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\arrays\\categorical.py', reloading
+2025-10-14 13:33:33,274 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\strings\\object_array.py', reloading
+2025-10-14 13:33:33,274 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\strings\\object_array.py', reloading
+2025-10-14 13:33:33,296 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\strings\\base.py', reloading
+2025-10-14 13:33:33,296 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\strings\\base.py', reloading
+2025-10-14 13:33:33,314 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\indexes\\interval.py', reloading
+2025-10-14 13:33:33,314 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\indexes\\interval.py', reloading
+2025-10-14 13:33:33,345 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\arrays\\interval.py', reloading
+2025-10-14 13:33:33,346 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\arrays\\interval.py', reloading
+2025-10-14 13:33:33,393 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\dtypes\\missing.py', reloading
+2025-10-14 13:33:33,393 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\dtypes\\missing.py', reloading
+2025-10-14 13:33:33,568 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\apply.py', reloading
+2025-10-14 13:33:33,568 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\apply.py', reloading
+2025-10-14 13:33:33,595 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\__init__.py', reloading
+2025-10-14 13:33:33,595 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\__init__.py', reloading
+2025-10-14 13:33:33,625 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\util\\numba_.py', reloading
+2025-10-14 13:33:33,659 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\numba_.py', reloading
+2025-10-14 13:33:33,659 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\numba_.py', reloading
+2025-10-14 13:33:33,681 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\ops.py', reloading
+2025-10-14 13:33:33,681 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\ops.py', reloading
+2025-10-14 13:33:33,705 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\grouper.py', reloading
+2025-10-14 13:33:33,705 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\groupby\\grouper.py', reloading
+2025-10-14 13:33:33,743 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\window\\rolling.py', reloading
+2025-10-14 13:33:33,743 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\window\\rolling.py', reloading
+2025-10-14 13:33:33,770 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\resample.py', reloading
+2025-10-14 13:33:34,631 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:33:34,772 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:33:40,638 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:33:40,639 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:33:40,639 - INFO - Attempting to load data from cache...
+2025-10-14 13:33:40,641 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:33:40,652 - WARNING -  * Debugger is active!
+2025-10-14 13:33:40,654 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:33:45,021 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\_numba\\executor.py', reloading
+2025-10-14 13:33:45,045 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\_numba\\kernels\\__init__.py', reloading
+2025-10-14 13:33:45,058 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\_numba\\kernels\\mean_.py', reloading
+2025-10-14 13:33:45,173 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:33:45,173 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:33:45,173 - INFO - Attempting to load data from cache...
+2025-10-14 13:33:45,177 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:33:45,195 - WARNING -  * Debugger is active!
+2025-10-14 13:33:45,203 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:33:46,501 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:33:52,198 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:33:52,198 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:33:52,198 - INFO - Attempting to load data from cache...
+2025-10-14 13:33:52,200 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:33:52,209 - WARNING -  * Debugger is active!
+2025-10-14 13:33:52,210 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:34:06,668 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\roperator.py', reloading
+2025-10-14 13:34:06,668 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pandas\\core\\roperator.py', reloading
+2025-10-14 13:34:08,023 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:34:08,356 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 13:34:14,206 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:34:14,207 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:34:14,207 - INFO - Attempting to load data from cache...
+2025-10-14 13:34:14,209 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:34:14,221 - WARNING -  * Debugger is active!
+2025-10-14 13:34:14,222 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:34:19,053 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 13:34:19,053 - INFO - Found transactions_train.csv (0.05 MB)
+2025-10-14 13:34:19,054 - INFO - Attempting to load data from cache...
+2025-10-14 13:34:19,056 - INFO - Successfully loaded from cache! Articles shape: (401, 26), Transactions shape: (501, 5)
+2025-10-14 13:34:19,073 - WARNING -  * Debugger is active!
+2025-10-14 13:34:19,076 - INFO -  * Debugger PIN: 101-216-444
+2025-10-14 13:36:13,938 - INFO -  * Detected change in 'C:\\Users\\saich\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\curses\\__init__.py', reloading
+2025-10-14 13:36:15,497 - INFO -  * Restarting with watchdog (windowsapi)

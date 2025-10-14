@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Diagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            overflow: hidden;
+            zoom: 0.9;
+        }
+        .container {
+            position: relative;
+            width: 1100px;
+            height: 650px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 70, 150, 0.1);
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+        }
+        .box {
+            position: absolute;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 10px 15px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .process { background-color: #e3f2fd; border-color: #90caf9; }
+        .data { background-color: #e8f5e9; border-color: #a5d6a7; }
+        .actor { background-color: #fff3e0; border-color: #ffcc80; }
+        .service { background-color: #fce4ec; border-color: #f8bbd0; }
+        .cache { background-color: #ede7f6; border-color: #d1c4e9; }
+
+        h4 { margin: 0 0 5px 0; font-size: 16px; color: #212121; }
+        p { margin: 0; font-size: 12px; color: #666; }
+
+        /* Positioning */
+        #user { top: 275px; left: 40px; width: 150px; }
+        #flask-server { top: 275px; left: 350px; width: 220px;}
+        #response { top: 400px; left: 40px; width: 150px; }
+
+        #init-process { top: 275px; right: 40px; width: 220px; }
+        #csv-files { top: 120px; right: 40px; width: 220px; }
+        #cache-files { top: 430px; right: 40px; width: 220px; }
+
+        /* Titles */
+        .title {
+            position: absolute;
+            font-size: 24px;
+            font-weight: 600;
+            color: #0d47a1;
+            padding: 5px 10px;
+            border-bottom: 3px solid #1976d2;
+        }
+        #title-online { top: 40px; left: 250px; }
+        #title-offline { top: 40px; right: 180px; }
+
+        /* SVG for arrows */
+        .connector-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .arrow-line {
+            stroke: #555;
+            stroke-width: 2;
+            marker-end: url(#arrowhead);
+        }
+        .arrow-label {
+            font-family: sans-serif;
+            font-size: 13px;
+            fill: #444;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="title-online" class="title">Online Recommendation Service</div>
+        <div id="title-offline" class="title">Offline Initialization</div>
+
+        <div id="user" class="box actor">
+            <h4>User / Client App</h4>
+            <p>Sends request with customer_id</p>
+        </div>
+        <div id="flask-server" class="box service">
+            <h4>Flask API Server</h4>
+            <p>Receives request, uses model, returns JSON with recommendations</p>
+        </div>
+
+        <div id="init-process" class="box process">
+            <h4>Initialization Script</h4>
+            <p>Generates embeddings, trains NN model, and saves to cache</p>
+        </div>
+        <div id="csv-files" class="box data">
+            <h4>Raw Data Sources</h4>
+            <p>articles.csv<br>transactions_train.csv</p>
+        </div>
+        <div id="cache-files" class="box cache">
+            <h4>Cached Artifacts</h4>
+            <p>embeddings.pkl<br>nn_model.pkl<br>dataframes.pkl</p>
+        </div>
+        
+        <svg class="connector-svg">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+                </marker>
+            </defs>
+
+            <line x1="200" y1="320" x2="345" y2="320" class="arrow-line" />
+            <text x="225" y="310" class="arrow-label">1. HTTP Request</text>
+            
+            <line x1="345" y1="340" x2="200" y2="340" class="arrow-line" />
+            <text x="235" y="360" class="arrow-label">3. JSON Response</text>
+
+            <line x1="600" y1="330" x2="800" y2="330" class="arrow-line" />
+             <text x="635" y="320" class="arrow-label">2. Load from Cache</text>
+
+            <line x1="910" y1="205" x2="910" y2="270" class="arrow-line" />
+             <text x="860" y="245" class="arrow-label">Load Data</text>
+
+            <line x1="910" y1="365" x2="910" y2="425" class="arrow-line" />
+             <text x="850" y="405" class="arrow-label">Save to Cache</text>
+        </svg>
+    </div>
+</body>
+</html>
