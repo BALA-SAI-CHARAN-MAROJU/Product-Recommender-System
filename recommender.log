@@ -1000,3 +1000,10 @@
  * Running on http://10.70.233.4:5000
 2025-10-14 13:58:12,523 - INFO - [33mPress CTRL+C to quit[0m
 2025-10-14 13:58:12,535 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 19:32:56,494 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 19:32:56,494 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-14 19:32:56,494 - INFO - Attempting to load data from cache...
+2025-10-14 19:32:56,494 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-10-14 19:32:56,495 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-10-14 19:32:56,495 - INFO - Step 1: Loading and preprocessing data...
+2025-10-14 19:32:56,759 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
