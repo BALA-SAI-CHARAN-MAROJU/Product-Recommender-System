@@ -1015,3 +1015,19 @@
 2025-10-14 19:33:25,170 - INFO - Step 2: Generating text embeddings with BERT...
 2025-10-14 19:33:25,172 - INFO - Use pytorch device_name: cpu
 2025-10-14 19:33:25,172 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 19:41:46,811 - INFO - Generated embeddings with shape: (72773, 384)
+2025-10-14 19:41:46,812 - INFO - Step 3: Training the Nearest Neighbor model...
+2025-10-14 19:41:46,831 - INFO - Nearest Neighbors model trained successfully
+2025-10-14 19:41:46,850 - INFO - Created cache directory
+2025-10-14 19:41:46,850 - INFO - Saving data to cache...
+2025-10-14 19:41:47,852 - INFO - Successfully saved data to cache!
+2025-10-14 19:41:47,852 - INFO - Recommendation system initialized and ready.
+2025-10-14 19:41:48,120 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.70.233.95:5000
+2025-10-14 19:41:48,121 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 19:41:48,148 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-14 19:42:13,238 - INFO - Found articles.csv (34.45 MB)
+2025-10-14 19:42:13,238 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-14 19:42:13,238 - INFO - Attempting to load data from cache...
