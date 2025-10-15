@@ -1031,3 +1031,89 @@
 2025-10-14 19:42:13,238 - INFO - Found articles.csv (34.45 MB)
 2025-10-14 19:42:13,238 - INFO - Found transactions_train.csv (3326.42 MB)
 2025-10-14 19:42:13,238 - INFO - Attempting to load data from cache...
+2025-10-15 10:48:07,371 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 10:48:07,372 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 10:48:07,372 - INFO - Attempting to load data from cache...
+2025-10-15 10:51:47,103 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 10:51:47,104 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 10:51:47,104 - INFO - Attempting to load data from cache...
+2025-10-15 10:51:57,873 - INFO - Successfully loaded from cache! Articles shape: (72773, 26), Transactions shape: (1166489, 5)
+2025-10-15 10:51:57,922 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.110.180.51:5000
+2025-10-15 10:51:57,922 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 10:51:57,951 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-15 10:52:11,050 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 10:52:11,050 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 10:52:11,050 - INFO - Attempting to load data from cache...
+2025-10-15 10:52:11,674 - INFO - Successfully loaded from cache! Articles shape: (72773, 26), Transactions shape: (1166489, 5)
+2025-10-15 10:52:11,691 - WARNING -  * Debugger is active!
+2025-10-15 10:52:11,694 - INFO -  * Debugger PIN: 101-216-444
+2025-10-15 10:52:32,676 - INFO - 127.0.0.1 - - [15/Oct/2025 10:52:32] "GET / HTTP/1.1" 200 -
+2025-10-15 10:52:50,733 - INFO - 10.110.180.51 - - [15/Oct/2025 10:52:50] "[36mGET / HTTP/1.1[0m" 304 -
+2025-10-15 10:54:42,999 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 10:54:42,999 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 10:54:42,999 - INFO - Attempting to load data from cache...
+2025-10-15 10:54:43,266 - INFO - Successfully loaded from cache! Articles shape: (72773, 26), Transactions shape: (1166489, 5)
+2025-10-15 10:54:43,303 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.110.180.51:5000
+2025-10-15 10:54:43,304 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 10:54:43,328 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-15 10:54:52,033 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 10:54:52,034 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 10:54:52,034 - INFO - Attempting to load data from cache...
+2025-10-15 10:54:52,340 - INFO - Successfully loaded from cache! Articles shape: (72773, 26), Transactions shape: (1166489, 5)
+2025-10-15 10:54:52,358 - WARNING -  * Debugger is active!
+2025-10-15 10:54:52,361 - INFO -  * Debugger PIN: 101-216-444
+2025-10-15 10:54:52,449 - INFO - 127.0.0.1 - - [15/Oct/2025 10:54:52] "[36mGET / HTTP/1.1[0m" 304 -
+2025-10-15 10:54:56,321 - INFO - 127.0.0.1 - - [15/Oct/2025 10:54:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-15 10:55:45,665 - INFO - 127.0.0.1 - - [15/Oct/2025 10:55:45] "[36mGET / HTTP/1.1[0m" 304 -
+2025-10-15 10:57:49,881 - INFO - 10.110.180.51 - - [15/Oct/2025 10:57:49] "GET / HTTP/1.1" 200 -
+2025-10-15 10:57:51,190 - INFO - 10.110.180.51 - - [15/Oct/2025 10:57:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-15 11:33:16,710 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 11:33:16,710 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 11:33:16,711 - INFO - Attempting to load data from cache...
+2025-10-15 11:33:19,205 - INFO - Successfully loaded from cache! Articles shape: (72773, 26), Transactions shape: (1166489, 5)
+2025-10-15 11:33:19,249 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.110.180.51:5000
+2025-10-15 11:33:19,249 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 11:33:19,266 - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-15 11:33:28,699 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 11:33:28,700 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 11:33:28,701 - INFO - Attempting to load data from cache...
+2025-10-15 11:33:28,994 - INFO - Successfully loaded from cache! Articles shape: (72773, 26), Transactions shape: (1166489, 5)
+2025-10-15 11:33:29,006 - WARNING -  * Debugger is active!
+2025-10-15 11:33:29,010 - INFO -  * Debugger PIN: 101-216-444
+2025-10-15 11:33:29,071 - INFO - 127.0.0.1 - - [15/Oct/2025 11:33:29] "GET / HTTP/1.1" 200 -
+2025-10-15 11:33:31,813 - INFO - 127.0.0.1 - - [15/Oct/2025 11:33:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-15 11:33:34,663 - INFO - 127.0.0.1 - - [15/Oct/2025 11:33:34] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:05,255 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:05] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:05,942 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:05] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:06,146 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:06] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:06,335 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:06] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:06,530 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:06] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:06,745 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:06] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:21,421 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:21] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:21,996 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:21] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:22,237 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:22] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:22,410 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:22] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:22,599 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:22] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:22,771 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:22] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:22,921 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:22] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:40,703 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:40] "GET / HTTP/1.1" 200 -
+2025-10-15 11:34:42,036 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:42] "[36mGET / HTTP/1.1[0m" 304 -
+2025-10-15 11:34:44,511 - INFO - 127.0.0.1 - - [15/Oct/2025 11:34:44] "[33mPOST /recommend HTTP/1.1[0m" 404 -
+2025-10-15 11:34:51,135 - INFO - 10.110.180.51 - - [15/Oct/2025 11:34:51] "GET / HTTP/1.1" 200 -
+2025-10-15 11:34:53,045 - INFO - 10.110.180.51 - - [15/Oct/2025 11:34:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-15 11:35:35,083 - INFO - Found articles.csv (34.45 MB)
+2025-10-15 11:35:35,083 - INFO - Found transactions_train.csv (3326.42 MB)
+2025-10-15 11:35:35,084 - INFO - Attempting to load data from cache...
+2025-10-15 11:35:35,084 - ERROR - Cache loading failed: [Errno 2] No such file or directory: 'cache\\articles_sample.pkl'
+2025-10-15 11:35:35,084 - INFO - Cache not found or invalid. Processing data from scratch...
+2025-10-15 11:35:35,084 - INFO - Step 1: Loading and preprocessing data...
+2025-10-15 11:35:35,389 - INFO - Successfully loaded articles.csv with shape: (105542, 25)

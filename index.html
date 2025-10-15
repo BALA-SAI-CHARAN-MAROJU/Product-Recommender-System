@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalized Product Recommender</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script>
-        // Tailwind Configuration
+        // Enhanced Tailwind Configuration
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -25,40 +25,150 @@
                             700: '#0369a1',
                             800: '#075985',
                             900: '#0c4a6e',
+                        },
+                        accent: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            300: '#f0abfc',
+                            400: '#e879f9',
+                            500: '#d946ef',
+                            600: '#c026d3',
+                            700: '#a21caf',
+                            800: '#86198f',
+                            900: '#701a75',
+                        },
+                        neon: {
+                            blue: '#00f5ff',
+                            purple: '#bf00ff',
+                            pink: '#ff0080',
+                            green: '#00ff88',
+                            orange: '#ff8800',
+                        },
+                        glass: {
+                            light: 'rgba(255, 255, 255, 0.1)',
+                            medium: 'rgba(255, 255, 255, 0.2)',
+                            dark: 'rgba(0, 0, 0, 0.1)',
                         }
                     },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                        'display': ['Playfair Display', 'serif'],
+                    },
                     animation: {
-                        'fade-in': 'fadeIn 0.7s ease-out',
-                        'slide-up': 'slideUp 0.7s ease-out',
-                        'scale-in': 'scaleIn 0.5s ease-out',
-                        'rotate-sun': 'rotateSun 0.5s ease-out',
-                        'rotate-moon': 'rotateMoon 0.5s ease-out',
-                        'cursor-blink': 'cursorBlink 1s infinite'
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 1s ease-out',
+                        'slide-down': 'slideDown 1s ease-out',
+                        'slide-left': 'slideLeft 1s ease-out',
+                        'slide-right': 'slideRight 1s ease-out',
+                        'scale-in': 'scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        'rotate-sun': 'rotateSun 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        'rotate-moon': 'rotateMoon 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        'float': 'float 8s ease-in-out infinite',
+                        'float-slow': 'floatSlow 12s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
+                        'cursor-pulse': 'cursorPulse 2s ease-in-out infinite',
+                        'cursor-trail': 'cursorTrail 0.6s ease-out',
+                        'gradient-shift': 'gradientShift 15s ease infinite',
+                        'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                        'morph': 'morph 8s ease-in-out infinite',
+                        'particle': 'particle 20s linear infinite',
                     },
                     keyframes: {
                         fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
                         slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '0%': { transform: 'translateY(60px)', opacity: '0' },
                             '100%': { transform: 'translateY(0)', opacity: '1' },
                         },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-60px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideLeft: {
+                            '0%': { transform: 'translateX(60px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        slideRight: {
+                            '0%': { transform: 'translateX(-60px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
                         scaleIn: {
-                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)', opacity: '0.8' },
                             '100%': { transform: 'scale(1)', opacity: '1' },
                         },
                         rotateSun: {
-                            '0%': { transform: 'rotate(0deg) scale(0.5)' },
+                            '0%': { transform: 'rotate(0deg) scale(0.3)' },
+                            '50%': { transform: 'rotate(180deg) scale(1.1)' },
                             '100%': { transform: 'rotate(360deg) scale(1)' },
                         },
                         rotateMoon: {
-                            '0%': { transform: 'rotate(0deg) scale(0.5)' },
+                            '0%': { transform: 'rotate(0deg) scale(0.3)' },
+                            '50%': { transform: 'rotate(-180deg) scale(1.1)' },
                             '100%': { transform: 'rotate(-360deg) scale(1)' },
                         },
-                        cursorBlink: {
-                            '0%, 100%': { opacity: '1' },
-                            '50%': { opacity: '0' },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '33%': { transform: 'translateY(-30px) rotate(1deg)' },
+                            '66%': { transform: 'translateY(-15px) rotate(-1deg)' },
+                        },
+                        floatSlow: {
+                            '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
+                            '25%': { transform: 'translateY(-20px) translateX(10px)' },
+                            '50%': { transform: 'translateY(-40px) translateX(0px)' },
+                            '75%': { transform: 'translateY(-20px) translateX(-10px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1)' },
+                            '100%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.6), 0 0 80px rgba(59, 130, 246, 0.2)' },
+                        },
+                        pulseSlow: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '0.7' },
+                            '50%': { transform: 'scale(1.05)', opacity: '1' },
+                        },
+                        cursorPulse: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '0.6' },
+                            '50%': { transform: 'scale(1.3)', opacity: '1' },
+                        },
+                        cursorTrail: {
+                            '0%': { transform: 'scale(1)', opacity: '1' },
+                            '100%': { transform: 'scale(0)', opacity: '0' },
+                        },
+                        gradientShift: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '25%': { backgroundPosition: '100% 0%' },
+                            '50%': { backgroundPosition: '100% 100%' },
+                            '75%': { backgroundPosition: '0% 100%' },
+                        },
+                        bounceGentle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(5deg)' },
+                            '75%': { transform: 'rotate(-5deg)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                        morph: {
+                            '0%, 100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
+                            '50%': { borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
+                        },
+                        particle: {
+                            '0%': { transform: 'translateY(100vh) rotate(0deg)', opacity: '0' },
+                            '10%': { opacity: '1' },
+                            '90%': { opacity: '1' },
+                            '100%': { transform: 'translateY(-100vh) rotate(360deg)', opacity: '0' },
                         }
                     }
                 }
@@ -66,221 +176,94 @@
         }
     </script>
     <style>
-        /* Cursor base styles */
-        .cursor-dot,
-        .cursor-dot-outline {
-            pointer-events: none;
+        /* Advanced Cursor Animations */
+        .cursor {
             position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00f5ff, #bf00ff);
+            pointer-events: none;
             z-index: 9999;
             mix-blend-mode: difference;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .cursor-dot {
-            width: 6px;
-            height: 6px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .cursor-dot-outline {
-            width: 30px;
-            height: 30px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 2px solid #ffffff;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
+            transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: cursor-pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
         }
 
-        /* Scrolling cursor styles */
-        .cursor-scrolling .cursor-dot {
-            width: 6px;
-            height: 6px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: breathe 2s infinite;
-        }
-
-        .cursor-scrolling .cursor-dot-outline {
-            width: 16px;
-            height: 35px;
-            background-color: transparent;
-            border: 2px solid #ffffff;
-            border-radius: 8px;
-            transform: translate(-50%, -50%);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Breathing animation for the dot */
-        @keyframes breathe {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); }
-            50% { transform: translate(-50%, -50%) scale(1.2); }
-        }
-
-        /* Scroll direction indicators with smoother animation */
-        .cursor-scrolling.scrolling-down .cursor-dot {
-            transform: translate(-50%, calc(-50% + 12px));
-        }
-
-        .cursor-scrolling.scrolling-up .cursor-dot {
-            transform: translate(-50%, calc(-50% - 12px));
-        }
-
-        /* Dark theme adjustments for scroll cursor */
-        .dark .cursor-scrolling .cursor-dot {
-            background-color: #22d3ee;
-        }
-        
-        .dark .cursor-scrolling .cursor-dot-outline {
-            border-color: #22d3ee;
-        }
-
-        /* Add smooth transition for dot position */
-        .cursor-scrolling .cursor-dot {
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        /* Button hover - hexagon */
-        .cursor-button .cursor-dot {
-            clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
-            width: 12px;
-            height: 12px;
-            background-color: #60a5fa;
-        }
-        
-        .cursor-button .cursor-dot-outline {
-            clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
-            width: 40px;
-            height: 40px;
-            border: none;
-            background-color: #60a5fa;
-            opacity: 0.3;
-            animation: rotate 2s linear infinite;
-        }
-
-        /* Input hover - beam */
-        .cursor-input .cursor-dot {
-            width: 3px;
-            height: 24px;
-            border-radius: 0;
-            background-color: #f0f9ff;
-            animation: blink 1s infinite;
-        }
-        
-        .cursor-input .cursor-dot-outline {
-            width: 12px;
+        .cursor-follower {
+            position: fixed;
+            width: 32px;
             height: 32px;
-            border-radius: 4px;
-            background-color: rgba(240, 249, 255, 0.2);
-            border-color: #f0f9ff;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: float 6s ease-in-out infinite;
         }
 
-        /* Link hover - arrow */
-        .cursor-link .cursor-dot {
-            clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
-            width: 24px;
-            height: 24px;
-            transform: translate(-50%, -50%) rotate(0deg);
-            animation: point 1s infinite;
-            background-color: #22d3ee;
-        }
-        
-        .cursor-link .cursor-dot-outline {
-            opacity: 0;
+        .cursor-trail {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff0080, #00ff88);
+            pointer-events: none;
+            z-index: 9997;
+            animation: cursor-trail 0.6s ease-out forwards;
         }
 
-        /* Click animation - starburst */
-        .cursor-clicking .cursor-dot {
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            width: 24px;
-            height: 24px;
-            background-color: #a5b4fc;
-        }
-        
-        .cursor-clicking .cursor-dot-outline {
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            width: 48px;
-            height: 48px;
-            border: none;
-            background-color: #a5b4fc;
-            opacity: 0.3;
-            animation: burst 0.5s ease-out;
+        .cursor.hover {
+            transform: scale(2.5);
+            background: linear-gradient(45deg, #ff0080, #ff8800);
+            box-shadow: 0 0 30px rgba(255, 0, 128, 0.8);
         }
 
-        /* Card hover - plus */
-        .cursor-card .cursor-dot {
-            clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
-            width: 16px;
-            height: 16px;
-            background-color: #34d399;
-        }
-        
-        .cursor-card .cursor-dot-outline {
-            width: 36px;
-            height: 36px;
-            background-color: rgba(52, 211, 153, 0.2);
-            border-color: #34d399;
-            transform: rotate(45deg);
+        .cursor-follower.hover {
+            transform: scale(1.8);
+            border-color: rgba(255, 0, 128, 0.6);
+            border-width: 3px;
         }
 
-        /* Animations */
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
+        .cursor.click {
+            transform: scale(0.8);
+            background: linear-gradient(45deg, #00ff88, #00f5ff);
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        @keyframes point {
-            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-            50% { transform: translate(-50%, -50%) rotate(-35deg); }
-        }
-
-        @keyframes burst {
-            0% { transform: translate(-50%, -50%) scale(0.5) rotate(0deg); }
-            50% { transform: translate(-50%, -50%) scale(1.2) rotate(180deg); }
-            100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); }
-        }
-
-        /* Hide default cursor */
-        * {
-            cursor: none !important;
-        }
-
-        /* Show default cursor for touch devices */
+        /* Hide cursor on touch devices */
         @media (hover: none) {
-            .cursor-dot,
-            .cursor-dot-outline {
+            .cursor, .cursor-follower, .cursor-trail {
                 display: none;
             }
-            * {
-                cursor: auto !important;
-            }
         }
 
-        /* Rest of your existing styles */
+        /* Enhanced Body Styles */
         body {
             font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
             min-height: 100vh;
-            background-color: transparent;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow-x: hidden;
+            cursor: none;
         }
 
-        /* Background wrapper */
+        body.dark {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+        }
+
+        /* Animated Background Elements */
         .bg-wrapper {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: -2;
+            overflow: hidden;
         }
 
         .bg-light,
@@ -293,7 +276,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transition: opacity 0.8s ease-in-out;
+            transition: opacity 1s ease-in-out;
         }
 
         .bg-light {
@@ -313,371 +296,612 @@
         body.dark .bg-dark {
             opacity: 1;
         }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #00f5ff, #bf00ff);
+            border-radius: 50%;
+            animation: particle 20s linear infinite;
+            opacity: 0.6;
+        }
+
+        .particle:nth-child(odd) {
+            background: linear-gradient(45deg, #ff0080, #00ff88);
+            animation-duration: 25s;
+        }
+
+        .particle:nth-child(3n) {
+            background: linear-gradient(45deg, #ff8800, #00f5ff);
+            animation-duration: 30s;
+        }
+
+        /* Glass Morphism Effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .glass-card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Enhanced Grid Layout */
         .card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
             position: relative;
         }
+
+        /* Advanced Loader */
         .loader {
-            border: 4px solid;
-            border-top: 4px solid currentColor;
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .loader::before,
+        .loader::after {
+            content: '';
+            position: absolute;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
             animation: spin 1s linear infinite;
         }
+
+        .loader::before {
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top: 4px solid #00f5ff;
+            border-right: 4px solid #bf00ff;
+        }
+
+        .loader::after {
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border: 3px solid transparent;
+            border-bottom: 3px solid #ff0080;
+            border-left: 3px solid #00ff88;
+            animation-direction: reverse;
+            animation-duration: 0.8s;
+        }
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Enhanced Theme Toggle */
         .theme-toggle {
             position: fixed;
-            top: 1rem;
-            right: 1rem;
+            top: 2rem;
+            right: 2rem;
             z-index: 50;
-            transition: all 0.3s ease;
-            width: 48px;
-            height: 48px;
-            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
+
         .theme-toggle:hover {
-            transform: scale(1.1);
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
         }
+
         .theme-toggle i {
-            font-size: 1.25rem;
-            transition: all 0.5s ease;
+            font-size: 1.5rem;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            color: white;
         }
+
         .theme-toggle .fa-sun {
-            animation: rotate-sun 0.5s ease-out;
+            animation: rotate-sun 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
+
         .theme-toggle .fa-moon {
-            animation: rotate-moon 0.5s ease-out;
+            animation: rotate-moon 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
+
+        /* Enhanced Product Cards */
         .product-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(40px) scale(0.9);
             position: relative;
             z-index: 1;
             height: 100%;
             background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         .product-card.show {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
         }
+
         .product-card .shopping-links {
             max-height: 0;
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             opacity: 0;
         }
+
         .product-card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
             z-index: 50;
         }
+
         .product-card:hover .shopping-links {
             max-height: 200px;
             opacity: 1;
         }
+
         .product-card .card-content {
             height: 100%;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
-        .product-card:hover .card-content {
-            background: inherit;
-            border-radius: inherit;
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
         }
-        .dark .loader {
-            border-color: #4B5563;
-            border-top-color: #9CA3AF;
+
+        .product-card:hover::before {
+            opacity: 1;
         }
+
+        /* Shimmer Effect */
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s linear infinite;
+        }
+
+        /* Dark Mode Adjustments */
+        .dark .loader::before {
+            border-top-color: #00f5ff;
+            border-right-color: #bf00ff;
+        }
+
+        .dark .loader::after {
+            border-bottom-color: #ff0080;
+            border-left-color: #00ff88;
+        }
+
+        .dark .product-card {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        /* Content Wrapper Enhancements */
         .content-wrapper {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            animation: fadeIn 0.7s ease-out;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
         .dark .content-wrapper {
-            background: rgba(17, 24, 39, 0.85);
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .cursor-pointer {
-            cursor: pointer;
+
+        /* Morphing Background Shapes */
+        .morph-shape {
+            position: absolute;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            background: linear-gradient(45deg, rgba(0, 245, 255, 0.1), rgba(191, 0, 255, 0.1));
+            animation: morph 8s ease-in-out infinite;
+            z-index: -1;
         }
-        input:focus {
-            cursor: text;
+
+        .morph-shape:nth-child(2) {
+            animation-delay: -2s;
+            background: linear-gradient(45deg, rgba(255, 0, 128, 0.1), rgba(0, 255, 136, 0.1));
         }
-        button:not(:disabled) {
-            cursor: pointer;
+
+        .morph-shape:nth-child(3) {
+            animation-delay: -4s;
+            background: linear-gradient(45deg, rgba(255, 136, 0, 0.1), rgba(0, 245, 255, 0.1));
         }
-        button:disabled {
-            cursor: not-allowed;
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .theme-toggle {
+                top: 1rem;
+                right: 1rem;
+                width: 48px;
+                height: 48px;
+            }
+            
+            .theme-toggle i {
+                font-size: 1.25rem;
+            }
         }
-        .typing-cursor::after {
-            content: '|';
-            animation: cursorBlink 1s infinite;
+
+        @media (max-width: 480px) {
+            .card-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
 <body class="bg-transparent text-gray-800 dark:text-gray-100">
-    <!-- Add cursor elements at the start of body -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-dot-outline"></div>
 
-    <!-- Add background wrapper -->
+    <!-- Custom Cursor Elements -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background -->
     <div class="bg-wrapper">
         <div class="bg-light"></div>
         <div class="bg-dark"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: 16s;"></div>
+        
+        <!-- Morphing Background Shapes -->
+        <div class="morph-shape" style="top: 10%; left: 10%; width: 200px; height: 200px;"></div>
+        <div class="morph-shape" style="top: 60%; right: 10%; width: 150px; height: 150px;"></div>
+        <div class="morph-shape" style="bottom: 20%; left: 20%; width: 100px; height: 100px;"></div>
     </div>
 
-    <!-- Theme Toggle Button -->
-    <button id="themeToggle" class="theme-toggle bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl">
-        <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
-        <i class="fas fa-moon text-blue-300 hidden dark:block"></i>
+    <!-- Enhanced Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle glass-card">
+        <i class="fas fa-sun dark:hidden"></i>
+        <i class="fas fa-moon hidden dark:block"></i>
     </button>
 
-    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
-        <div class="content-wrapper p-8 mb-8">
-            <header class="text-center mb-12 animate-fade-in">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                    Personalized Product Recommender
-                </h1>
-                <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
-                    Enter a customer ID to get product recommendations based on their purchase history.
-                </p>
-            </header>
+    <!-- Main Container with New Layout -->
+    <div class="min-h-screen flex flex-col">
+        <!-- Hero Section -->
+        <section class="relative py-20 px-4 md:px-8">
+            <div class="container mx-auto max-w-7xl">
+                <div class="content-wrapper p-8 md:p-12 mb-16">
+                    <header class="text-center mb-16 animate-fade-in">
+                        <div class="inline-block mb-6">
+                            <h1 class="text-5xl md:text-7xl font-display font-bold bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent mb-6 animate-scale-in">
+                                AI-Powered
+                            </h1>
+                            <h2 class="text-4xl md:text-6xl font-display font-bold text-gray-900 dark:text-white mb-4 animate-slide-up">
+                                Product Recommender
+                            </h2>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed animate-slide-up">
+                            Discover your next favorite products with our intelligent recommendation system powered by advanced machine learning algorithms.
+                        </p>
+                        <div class="flex justify-center mt-8 animate-bounce-gentle">
+                            <div class="w-16 h-1 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full"></div>
+                        </div>
+                    </header>
 
-            <div class="bg-white/90 dark:bg-gray-800/90 p-8 rounded-2xl shadow-lg mb-12 animate-slide-up backdrop-blur-md">
-                <div class="flex flex-col sm:flex-row items-center gap-4">
-                    <div class="relative w-full">
-                        <input type="text" 
-                               id="customerIdInput" 
-                               class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg 
-                                      bg-white/90 dark:bg-gray-700/90 text-gray-900 dark:text-white
-                                      focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
-                                      transition-all duration-300" 
-                               placeholder="Enter or paste a customer ID...">
+                    <!-- Enhanced Input Section -->
+                    <div class="glass-card p-8 md:p-12 rounded-3xl mb-16 animate-slide-up">
+                        <div class="max-w-4xl mx-auto">
+                            <div class="text-center mb-8">
+                                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                                    Get Personalized Recommendations
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-300">
+                                    Enter a customer ID to unlock AI-powered product suggestions
+                                </p>
+                            </div>
+                            
+                            <div class="flex flex-col lg:flex-row items-center gap-6">
+                                <div class="relative w-full lg:flex-1">
+                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                        <i class="fas fa-user text-gray-400 dark:text-gray-500"></i>
+                                    </div>
+                                    <input type="text" 
+                                           id="customerIdInput" 
+                                           class="w-full pl-12 pr-4 py-4 text-lg border-2 border-gray-200 dark:border-gray-600 rounded-2xl 
+                                                  bg-white/90 dark:bg-gray-800/90 text-gray-900 dark:text-white
+                                                  focus:ring-4 focus:ring-neon-blue/30 focus:border-neon-blue 
+                                                  transition-all duration-300 placeholder-gray-400 dark:placeholder-gray-500
+                                                  hover:border-neon-purple/50" 
+                                           placeholder="Enter customer ID...">
+                                </div>
+                                <button id="getRecsButton" 
+                                        class="w-full lg:w-auto bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold px-12 py-4 
+                                               rounded-2xl hover:from-neon-purple hover:to-neon-pink focus:outline-none focus:ring-4 
+                                               focus:ring-neon-blue/30 transition-all duration-300 transform hover:scale-105 
+                                               active:scale-95 shadow-lg hover:shadow-xl animate-glow">
+                                    <i class="fas fa-magic mr-2"></i>
+                                    Get Recommendations
+                                </button>
+                            </div>
+                            
+                            <!-- Sample Customer IDs -->
+                            <div id="sampleCustomers" class="mt-8 text-center">
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    Don't have an ID? Try these sample customers:
+                                </p>
+                                <div class="flex flex-wrap justify-center gap-3">
+                                    <button class="sample-id-btn glass-card hover:bg-neon-blue/20 hover:text-neon-blue 
+                                                 dark:hover:bg-neon-purple/20 dark:hover:text-neon-purple px-4 py-2 rounded-xl 
+                                                 transition-all duration-300 transform hover:scale-105" 
+                                            data-full-id="5aafadc16529cc7d272b35571af76f184188d3e12fb9f4433f94315ebb4dc095">
+                                        <i class="fas fa-user-circle mr-2"></i>
+                                        5aafadc16529...
+                                    </button>
+                                    <button class="sample-id-btn glass-card hover:bg-neon-blue/20 hover:text-neon-blue 
+                                                 dark:hover:bg-neon-purple/20 dark:hover:text-neon-purple px-4 py-2 rounded-xl 
+                                                 transition-all duration-300 transform hover:scale-105" 
+                                            data-full-id="00006413d8573cd20ed7128e53b7b13819fe5cfc2d801f3fc43a6932f4e5559d">
+                                        <i class="fas fa-user-circle mr-2"></i>
+                                        00006413d8...
+                                    </button>
+                                    <button class="sample-id-btn glass-card hover:bg-neon-blue/20 hover:text-neon-blue 
+                                                 dark:hover:bg-neon-purple/20 dark:hover:text-neon-purple px-4 py-2 rounded-xl 
+                                                 transition-all duration-300 transform hover:scale-105" 
+                                            data-full-id="0001d44dbe7f6c4b35d93641d805be95dfd0c941373e3562b6f3a09a52980682">
+                                        <i class="fas fa-user-circle mr-2"></i>
+                                        0001d44dbe...
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button id="getRecsButton" 
-                            class="w-full sm:w-auto bg-primary-600 text-white font-semibold px-8 py-3 
-                                   rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 
-                                   focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 
-                                   transform hover:scale-105 active:scale-95">
-                        Get Recommendations
-                    </button>
                 </div>
-                <div id="sampleCustomers" class="mt-6 text-sm text-gray-500 dark:text-gray-400">
-                    <p class="mb-2">Don't have an ID? Try one of these samples:</p>
-                    <div class="flex flex-wrap gap-2">
-                        <button class="sample-id-btn bg-gray-100/90 dark:bg-gray-700/90 hover:bg-gray-200/90 
-                                     dark:hover:bg-gray-600/90 px-3 py-1.5 rounded-md transition-colors 
-                                     duration-200" 
-                                data-full-id="5aafadc16529cc7d272b35571af76f184188d3e12fb9f4433f94315ebb4dc095">
-                                5aafadc16529...
-                        </button>
-                        <button class="sample-id-btn bg-gray-100/90 dark:bg-gray-700/90 hover:bg-gray-200/90 
-                                     dark:hover:bg-gray-600/90 px-3 py-1.5 rounded-md transition-colors 
-                                     duration-200" 
-                                data-full-id="00006413d8573cd20ed7128e53b7b13819fe5cfc2d801f3fc43a6932f4e5559d">
-                            00006413d8...
-                        </button>
-                        <button class="sample-id-btn bg-gray-100/90 dark:bg-gray-700/90 hover:bg-gray-200/90 
-                                     dark:hover:bg-gray-600/90 px-3 py-1.5 rounded-md transition-colors 
-                                     duration-200" 
-                                data-full-id="0001d44dbe7f6c4b35d93641d805be95dfd0c941373e3562b6f3a09a52980682">
-                            0001d44dbe...
-                        </button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="hidden flex-1 px-4 md:px-8 pb-20">
+            <div class="container mx-auto max-w-7xl">
+                <div class="content-wrapper p-8 md:p-12">
+                    <!-- Enhanced Loader -->
+                    <div id="loader" class="flex flex-col justify-center items-center py-20 hidden">
+                        <div class="loader mb-6"></div>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 animate-pulse">
+                            Analyzing preferences and generating recommendations...
+                        </p>
+                    </div>
+
+                    <!-- Enhanced Error Message -->
+                    <div id="errorMessage" class="hidden glass-card border-2 border-red-400 dark:border-red-600 
+                                                text-red-700 dark:text-red-300 px-8 py-6 rounded-2xl mb-8 animate-slide-down" role="alert">
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-2xl mr-4"></i>
+                            <div>
+                                <strong class="font-bold text-xl">Error: </strong>
+                                <span class="block sm:inline text-lg" id="errorText"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Enhanced Last Purchase Info -->
+                    <div id="lastPurchaseInfo" class="hidden mb-16 animate-fade-in">
+                        <div class="text-center mb-8">
+                            <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-800 dark:text-gray-200 mb-4">
+                                Based on your last purchase
+                            </h2>
+                            <div class="w-24 h-1 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full mx-auto"></div>
+                        </div>
+                        <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 
+                                    transform transition-all duration-300 hover:shadow-2xl backdrop-blur-md">
+                            <div class="relative">
+                                <img id="lastPurchaseImg" src="" alt="Last Purchased Product" 
+                                     class="w-32 h-40 md:w-40 md:h-48 object-cover rounded-2xl shadow-lg">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h3 id="lastPurchaseName" class="font-bold text-2xl md:text-3xl mb-3 text-gray-900 dark:text-white"></h3>
+                                <p id="lastPurchaseType" class="text-lg text-gray-600 dark:text-gray-300 mb-2"></p>
+                                <p id="lastPurchaseId" class="text-sm text-gray-400 dark:text-gray-500 font-mono"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Recommendations -->
+                    <div id="recommendationsContainer" class="hidden animate-fade-in">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-800 dark:text-gray-200 mb-4">
+                                We think you'll love these
+                            </h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                                Carefully selected based on your preferences and similar customers
+                            </p>
+                            <div class="w-24 h-1 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full mx-auto"></div>
+                        </div>
+                        <div id="recommendationsGrid" class="card-container">
+                            <!-- Cards will be dynamically inserted here -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="resultsSection" class="hidden animate-fade-in content-wrapper p-8">
-            <div id="loader" class="flex justify-center items-center py-12 hidden">
-                <div class="loader"></div>
-            </div>
-
-            <div id="errorMessage" class="hidden bg-red-100/90 dark:bg-red-900/50 border border-red-400 
-                                        dark:border-red-700 text-red-700 dark:text-red-300 px-6 py-4 
-                                        rounded-lg relative mb-6" role="alert">
-                <strong class="font-bold">Error: </strong>
-                <span class="block sm:inline" id="errorText"></span>
-            </div>
-            
-            <div id="lastPurchaseInfo" class="hidden mb-12">
-                <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
-                    Based on your last purchase:
-                </h2>
-                <div class="bg-white/90 dark:bg-gray-800/90 p-6 rounded-xl shadow-md flex items-center gap-6 
-                            transform transition-all duration-300 hover:shadow-lg backdrop-blur-md">
-                    <img id="lastPurchaseImg" src="" alt="Last Purchased Product" 
-                         class="w-24 h-32 object-cover rounded-lg shadow-sm">
-                    <div>
-                        <p id="lastPurchaseName" class="font-bold text-xl mb-2 text-gray-900 dark:text-white"></p>
-                        <p id="lastPurchaseType" class="text-gray-600 dark:text-gray-300"></p>
-                        <p id="lastPurchaseId" class="text-sm text-gray-400 dark:text-gray-500 mt-2"></p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="recommendationsContainer" class="hidden">
-                <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
-                    We think you'll like these:
-                </h2>
-                <div id="recommendationsGrid" class="card-container">
-                    <!-- Cards will be dynamically inserted here -->
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 
-    <!-- Copyright Footer -->
-    <footer class="text-center py-6 mt-8 text-gray-600 dark:text-gray-400">
-        <p>&copy; 2025 Product Recommender System. All rights reserved.</p>
+    <!-- Enhanced Footer -->
+    <footer class="glass-card text-center py-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600 dark:text-gray-400">
+                        &copy; 2025 AI Product Recommender System. Powered by Machine Learning.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-neon-blue transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-neon-purple transition-colors duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-neon-pink transition-colors duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // Updated cursor animation script
-        const cursorDot = document.querySelector(".cursor-dot");
-        const cursorOutline = document.querySelector(".cursor-dot-outline");
-
-        // Variables for scroll handling
-        let lastScrollY = window.scrollY;
-        let scrollTimeout;
-        let isScrolling = false;
-
-        // Precise cursor positioning
-        document.addEventListener("mousemove", (e) => {
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            // Request animation frame for smooth movement
-            requestAnimationFrame(() => {
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
-                cursorOutline.style.left = `${posX}px`;
-                cursorOutline.style.top = `${posY}px`;
-            });
-        });
-
-        // Scroll handling
-        window.addEventListener("scroll", () => {
-            if (!isScrolling) {
-                document.body.classList.add('cursor-scrolling');
-                isScrolling = true;
+        // Enhanced Cursor Animation System
+        class CursorAnimation {
+            constructor() {
+                this.cursor = document.querySelector('.cursor');
+                this.cursorFollower = document.querySelector('.cursor-follower');
+                this.trail = [];
+                this.maxTrailLength = 20;
+                this.isHovering = false;
+                this.init();
             }
 
-            const currentScroll = window.scrollY;
-            const scrollDelta = currentScroll - lastScrollY;
-            
-            // Only update classes if there's actual scroll movement
-            if (Math.abs(scrollDelta) > 1) {  // Small threshold to prevent tiny movements
-                if (scrollDelta > 0) {
-                    // Scrolling down
-                    document.body.classList.remove('scrolling-up');
-                    document.body.classList.add('scrolling-down');
-                } else {
-                    // Scrolling up
-                    document.body.classList.remove('scrolling-down');
-                    document.body.classList.add('scrolling-up');
+            init() {
+                if (window.matchMedia('(hover: none)').matches) return;
+                
+                this.bindEvents();
+                this.createTrail();
+            }
+
+            bindEvents() {
+                document.addEventListener('mousemove', (e) => this.updateCursor(e));
+                document.addEventListener('mouseenter', () => this.showCursor());
+                document.addEventListener('mouseleave', () => this.hideCursor());
+                document.addEventListener('mousedown', () => this.cursorClick());
+                document.addEventListener('mouseup', () => this.cursorRelease());
+                
+                // Hover effects for interactive elements
+                const hoverElements = document.querySelectorAll('button, a, input, .product-card, .sample-id-btn');
+                hoverElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => this.cursorHover());
+                    el.addEventListener('mouseleave', () => this.cursorUnhover());
+                });
+            }
+
+            updateCursor(e) {
+                if (!this.cursor || !this.cursorFollower) return;
+                
+                const x = e.clientX;
+                const y = e.clientY;
+                
+                // Update main cursor
+                this.cursor.style.left = x + 'px';
+                this.cursor.style.top = y + 'px';
+                
+                // Update follower with delay
+                setTimeout(() => {
+                    this.cursorFollower.style.left = x + 'px';
+                    this.cursorFollower.style.top = y + 'px';
+                }, 50);
+                
+                // Create trail effect
+                this.createTrailDot(x, y);
+            }
+
+            createTrailDot(x, y) {
+                const dot = document.createElement('div');
+                dot.className = 'cursor-trail';
+                dot.style.left = x + 'px';
+                dot.style.top = y + 'px';
+                document.body.appendChild(dot);
+                
+                this.trail.push(dot);
+                if (this.trail.length > this.maxTrailLength) {
+                    const oldDot = this.trail.shift();
+                    if (oldDot && oldDot.parentNode) {
+                        oldDot.parentNode.removeChild(oldDot);
+                    }
+                }
+                
+                setTimeout(() => {
+                    if (dot.parentNode) {
+                        dot.parentNode.removeChild(dot);
+                    }
+                }, 600);
+            }
+
+            createTrail() {
+                // Pre-create trail elements for better performance
+                for (let i = 0; i < this.maxTrailLength; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'cursor-trail';
+                    dot.style.display = 'none';
+                    document.body.appendChild(dot);
                 }
             }
-            
-            lastScrollY = currentScroll;
 
-            // Clear any existing timeout
-            clearTimeout(scrollTimeout);
-            
-            // Set new timeout
-            scrollTimeout = setTimeout(() => {
-                document.body.classList.remove('cursor-scrolling', 'scrolling-down', 'scrolling-up');
-                isScrolling = false;
-            }, 200);  // Increased timeout for smoother transition
-        });
-
-        // Element-specific cursor styles
-        const buttons = document.querySelectorAll('button');
-        const inputs = document.querySelectorAll('input');
-        const links = document.querySelectorAll('a');
-        const cards = document.querySelectorAll('.product-card');
-
-        // Add hover listeners for different elements
-        buttons.forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                if (!isScrolling) {
-                document.body.classList.add('cursor-button');
-                }
-            });
-            button.addEventListener('mouseleave', () => {
-                document.body.classList.remove('cursor-button');
-            });
-        });
-
-        // Update other element listeners similarly
-        inputs.forEach(input => {
-            input.addEventListener('mouseenter', () => {
-                if (!isScrolling) {
-                document.body.classList.add('cursor-input');
-                }
-            });
-            input.addEventListener('mouseleave', () => {
-                document.body.classList.remove('cursor-input');
-            });
-        });
-
-        links.forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                if (!isScrolling) {
-                document.body.classList.add('cursor-link');
-                }
-            });
-            link.addEventListener('mouseleave', () => {
-                document.body.classList.remove('cursor-link');
-            });
-        });
-
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                if (!isScrolling) {
-                document.body.classList.add('cursor-card');
-                }
-            });
-            card.addEventListener('mouseleave', () => {
-                document.body.classList.remove('cursor-card');
-            });
-        });
-
-        // Click animation
-        document.addEventListener("mousedown", () => {
-            if (!isScrolling) {
-            document.body.classList.add('cursor-clicking');
+            showCursor() {
+                if (this.cursor) this.cursor.style.opacity = '1';
+                if (this.cursorFollower) this.cursorFollower.style.opacity = '1';
             }
-        });
 
-        document.addEventListener("mouseup", () => {
-            document.body.classList.remove('cursor-clicking');
-        });
+            hideCursor() {
+                if (this.cursor) this.cursor.style.opacity = '0';
+                if (this.cursorFollower) this.cursorFollower.style.opacity = '0';
+            }
 
-        // Hide/show cursor
-        document.addEventListener("mouseleave", () => {
-            cursorDot.style.opacity = 0;
-            cursorOutline.style.opacity = 0;
-        });
+            cursorHover() {
+                this.isHovering = true;
+                if (this.cursor) this.cursor.classList.add('hover');
+                if (this.cursorFollower) this.cursorFollower.classList.add('hover');
+            }
 
-        document.addEventListener("mouseenter", () => {
-            cursorDot.style.opacity = 1;
-            cursorOutline.style.opacity = 1;
-        });
+            cursorUnhover() {
+                this.isHovering = false;
+                if (this.cursor) this.cursor.classList.remove('hover');
+                if (this.cursorFollower) this.cursorFollower.classList.remove('hover');
+            }
 
-        // Theme Toggle Functionality
+            cursorClick() {
+                if (this.cursor) this.cursor.classList.add('click');
+            }
+
+            cursorRelease() {
+                if (this.cursor) this.cursor.classList.remove('click');
+            }
+        }
+
+        // Initialize cursor animations
+        const cursorAnimation = new CursorAnimation();
+
+        // Enhanced Theme Toggle Functionality
         const themeToggle = document.getElementById('themeToggle');
         
         // Check for saved theme preference or default to light
@@ -770,12 +994,12 @@
             recommendationsContainer.classList.add('hidden');
         }
 
-        // Enhanced displayResults function with staggered animations
+        // Enhanced displayResults function with staggered animations and new design
         function displayResults(lastPurchase, recommendations) {
-            // Display last purchase with fade-in
+            // Display last purchase with enhanced styling
             if (lastPurchase) {
                 document.getElementById('lastPurchaseImg').src = 
-                    `https://placehold.co/200x240/e2e8f0/4a5568?text=${encodeURIComponent(lastPurchase.prod_name || 'Product')}`;
+                    `https://placehold.co/400x480/e2e8f0/4a5568?text=${encodeURIComponent(lastPurchase.prod_name || 'Product')}`;
                 document.getElementById('lastPurchaseName').textContent = lastPurchase.prod_name;
                 document.getElementById('lastPurchaseType').textContent = lastPurchase.product_type_name;
                 document.getElementById('lastPurchaseId').textContent = `ID: ${lastPurchase.article_id}`;
@@ -785,41 +1009,50 @@
                 lastPurchaseInfo.classList.add('hidden');
             }
 
-            // Display recommendations with staggered animations
+            // Display recommendations with enhanced staggered animations
             recommendationsGrid.innerHTML = '';
             if (recommendations && recommendations.length > 0) {
                 recommendations.forEach((article, index) => {
                     const card = document.createElement('div');
-                    card.className = 'product-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden';
-                    card.style.transitionDelay = `${index * 100}ms`;
+                    card.className = 'product-card glass-card rounded-2xl shadow-lg overflow-hidden';
+                    card.style.transitionDelay = `${index * 150}ms`;
                     
                     // Create search-friendly product type name
                     const searchProductType = encodeURIComponent(article.product_type_name.replace(/[^\w\s]/gi, ''));
                     
                     card.innerHTML = `
-                        <div class="card-content">
-                            <img src="https://placehold.co/400x480/e2e8f0/4a5568?text=${encodeURIComponent(article.prod_name || 'Product')}" 
-                                 alt="${article.prod_name}" 
-                                 class="w-full h-48 object-cover">
-                            <div class="p-4 flex-grow">
-                                <h3 class="font-semibold text-md text-gray-900 dark:text-white truncate">
+                        <div class="card-content relative">
+                            <div class="relative overflow-hidden">
+                                <img src="https://placehold.co/400x480/e2e8f0/4a5568?text=${encodeURIComponent(article.prod_name || 'Product')}" 
+                                     alt="${article.prod_name}" 
+                                     class="w-full h-56 object-cover transition-transform duration-500 hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute top-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                    <div class="bg-white/90 dark:bg-gray-800/90 rounded-full p-2 shadow-lg">
+                                        <i class="fas fa-heart text-red-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col">
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-2 line-clamp-2">
                                     ${article.prod_name}
                                 </h3>
-                                <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">
+                                <p class="text-gray-600 dark:text-gray-300 text-sm mb-3 flex items-center">
+                                    <i class="fas fa-tag mr-2 text-neon-blue"></i>
                                     ${article.product_type_name}
                                 </p>
-                                <p class="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                                <p class="text-xs text-gray-400 dark:text-gray-500 mb-4 font-mono">
                                     ID: ${article.article_id}
                                 </p>
-                                <div class="shopping-links mt-4 space-y-2">
+                                <div class="shopping-links mt-auto space-y-3">
                                     <a href="https://www.amazon.com/s?k=${searchProductType}" 
                                        target="_blank" 
-                                       class="flex items-center justify-center px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg transition-colors duration-200">
+                                       class="flex items-center justify-center px-4 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
                                        <i class="fab fa-amazon mr-2"></i> View on Amazon
                                     </a>
                                     <a href="https://www.flipkart.com/search?q=${searchProductType}" 
                                        target="_blank" 
-                                       class="flex items-center justify-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors duration-200">
+                                       class="flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
                                        <i class="fas fa-shopping-cart mr-2"></i> Check on Flipkart
                                     </a>
                                 </div>
@@ -827,10 +1060,11 @@
                         </div>
                     `;
                     recommendationsGrid.appendChild(card);
-                    // Trigger animation after a brief delay
+                    
+                    // Enhanced animation trigger with stagger effect
                     setTimeout(() => {
                         card.classList.add('show');
-                    }, 50);
+                    }, 100 + (index * 100));
                 });
                 recommendationsContainer.classList.remove('hidden');
                 recommendationsContainer.classList.add('animate-fade-in');
@@ -839,13 +1073,6 @@
             }
         }
 
-        // Add typing cursor effect to input
-        customerIdInput.addEventListener('focus', () => {
-            customerIdInput.classList.add('typing-cursor');
-        });
-        customerIdInput.addEventListener('blur', () => {
-            customerIdInput.classList.remove('typing-cursor');
-        });
 
         // Enhanced theme toggle animation
         themeToggle.addEventListener('click', () => {
