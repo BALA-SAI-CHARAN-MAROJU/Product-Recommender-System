@@ -1117,3 +1117,11 @@
 2025-10-15 11:35:35,084 - INFO - Cache not found or invalid. Processing data from scratch...
 2025-10-15 11:35:35,084 - INFO - Step 1: Loading and preprocessing data...
 2025-10-15 11:35:35,389 - INFO - Successfully loaded articles.csv with shape: (105542, 25)
+2025-10-15 11:35:53,699 - INFO - Successfully loaded transactions_train.csv with shape: (31788324, 5)
+2025-10-15 11:35:59,908 - INFO - Sampled 50000 customers from 1362281 total customers
+2025-10-15 11:36:03,623 - INFO - Got 1153478 transactions for sampled customers
+2025-10-15 11:36:03,641 - INFO - Found 72643 unique articles in sampled transactions
+2025-10-15 11:36:03,656 - INFO - Got details for 72643 articles
+2025-10-15 11:36:03,724 - INFO - Step 2: Generating text embeddings with BERT...
+2025-10-15 11:36:03,727 - INFO - Use pytorch device_name: cpu
+2025-10-15 11:36:03,727 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
